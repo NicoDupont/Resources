@@ -1,8 +1,3 @@
-Creation date : 29/03/2017  (fr)        
-Last update : 29/03/2017    (fr)       
-Author(s) : Nicolas DUPONT   
-Contributor(s) :     
-
 ---
 ##### How to do a LAG without the LAG function
 
@@ -77,3 +72,9 @@ run;
 ## result : 
 
 ![](https://github.com/NicoDupont/Ressources/blob/master/SAS/Various/img/resultwithoutlag2.png?raw=true) 
+
+
+Creation date : 29/03/2017  (fr)        
+Last update : 29/03/2017    (fr)       
+Author(s) : Nicolas DUPONT   
+Contributor(s) :     
