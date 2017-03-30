@@ -42,6 +42,7 @@ run;
 
 ## result :  
 
+![](https://github.com/NicoDupont/Ressources/blob/master/SAS/Various/img/resultwithoutlag.png?raw=true) 
 
 ---
 
@@ -74,3 +75,5 @@ run;
 ```
 
 ## result : 
+
+![](https://github.com/NicoDupont/Ressources/blob/master/SAS/Various/img/resultwithoutlag2.png?raw=true) 
