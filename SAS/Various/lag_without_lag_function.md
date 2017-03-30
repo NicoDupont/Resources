@@ -37,7 +37,7 @@ run;
 
 ## result :  
 
-![](https://github.com/NicoDupont/Ressources/blob/master/SAS/Various/img/resultwithoutlag.png?raw=true) 
+![](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/img/resultwithoutlag.png?raw=true) 
 
 ---
 
@@ -71,7 +71,7 @@ run;
 
 ## result : 
 
-![](https://github.com/NicoDupont/Ressources/blob/master/SAS/Various/img/resultwithoutlag2.png?raw=true) 
+![](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/img/resultwithoutlag2.png?raw=true) 
 
 
 Creation date : 29/03/2017  (fr)        
