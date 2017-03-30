@@ -2,11 +2,15 @@
 
 These resources are codes that I have written myself or retrieved on the internet.  
  Most of the time or when it's possible, a dataset or an example are available to test by yourself..  
+ Do not hesitate to send me an email/message if you see a mistake !!  
 
  - [SAS](https://github.com/NicoDupont/Resources/tree/master/SAS)  (9.X) 
- - VBA
+ - Python (3.X)
+ - R
  - SQL
- - Python 3.X
+ - [VBA-Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel)
+
+ 
  
   
 
