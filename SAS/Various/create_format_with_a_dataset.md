@@ -6,8 +6,8 @@ Tested with SAS 9.3
 
 ---
 
-###### How to create a sas format from a table/dataset:  
-###### You can adapt with a flat file in entry or make a macro.  
+#### How to create a sas format from a table/dataset:  
+#### You can adapt with a flat file in entry or make a macro.  
 
  - 1 - Example with string data
  - 2 - Example with num data
@@ -15,7 +15,7 @@ Tested with SAS 9.3
 
 ---
 
-### 1 - Example with string data : */
+### 1 - Example with string data : 
 
 ```sas
 data work.dept;
@@ -56,7 +56,7 @@ Result :
 
 
 
-### 2 - Example with num data : */
+### 2 - Example with num data : 
 
 ```sas
 data work.num;
