@@ -3,6 +3,7 @@ Creation date : 01/04/2017  (fr)
 Last update : 02/04/2017    (fr)
 Author(s) : Nicolas DUPONT
 Contributor(s) :
+Tested on SAS studio 9.4
 */
 
 /*
