@@ -4,10 +4,8 @@ Author(s) : Nicolas DUPONT
 Contributor(s) :   
 Tested with SAS Studio 9.4   
 
----      
-
 ---
-# Delete SAS dataset    
+## Delete SAS dataset    
 
 - PROC DATASET 
 - PROC DELETE 
