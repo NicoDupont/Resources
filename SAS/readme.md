@@ -19,4 +19,4 @@ For each resource, you have a markdown file and a .sas file
 
 Code snippets with less explanation or example  
 
-- IFC and IFN function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/ifc_and_ifn_function.sas)
+- IFC() and IFN() function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/ifc_and_ifn_function.sas)
