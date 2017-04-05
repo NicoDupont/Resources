@@ -20,3 +20,4 @@ For each resource, you have a markdown file and a .sas file
 Code snippets with less explanation or example  
 
 - IFC() and IFN() function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/ifc_and_ifn_function.sas)
+- Array in Datastep [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/an_array_in_a_datastep.sas)
