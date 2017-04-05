@@ -20,7 +20,6 @@ datalines;
 ;
 run;
 
-
 data test2;
 set test;
 	array tabvar {*} var1 - var5;
@@ -35,13 +34,10 @@ run;
 /*-------------------*/
 /* Another example : */
 data test;
-
-array motif {5} $  _TEMPORARY_  ('ONE' 'TWO' 'THREE' 'FOUR' 'FIVE');
-
- do i = 1 to 5;
-	mtf = motif[i];        
-	output;
-    drop i;
- end;
-
+	array motif {5} $  _TEMPORARY_  ('ONE' 'TWO' 'THREE' 'FOUR' 'FIVE');
+	do i = 1 to 5;
+		mtf = motif[i];        
+		output;
+	    	drop i;
+	end;
 run;
