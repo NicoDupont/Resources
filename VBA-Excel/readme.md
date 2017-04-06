@@ -2,6 +2,6 @@
 ## VBA - Excel
 ---
 
-For each resource, you have a markdown file and a .bas file
+For each resource, you have a markdown file or a .bas file
 
  - 
