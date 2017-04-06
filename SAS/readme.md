@@ -13,6 +13,7 @@ For each resource, you have a markdown file and a .sas file
 **Dataset :**  
 
 - 4 ways to delete sas datasets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/delete_dataset.md)
+- Test if a variable exist or not [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/var_exist.md)
 
 
 **Snippets :**  
