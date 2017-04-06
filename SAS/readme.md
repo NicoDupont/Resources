@@ -1,13 +1,13 @@
 
-![](https://support.sas.com/images/SAS_TPTK_logo.gif) 
+![](https://support.sas.com/images/SAS_TPTK_logo.gif)
 ---
 
 For each resource, you have a markdown file and/or a .sas file
 
 **Various :**  
 
- - Lag without the lag function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/lag_without_lag_function.md) 
- - Create a sas format with a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/create_format_with_a_dataset.md) 
+ - Lag without the lag function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/lag_without_lag_function.md)
+ - Create a sas format with a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/create_format_with_a_dataset.md)
  - Use ans create JSON file example with the ISS API [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/use_the_json_format.sas)
 
 
@@ -23,4 +23,4 @@ Code snippets with less explanation or example
 
 - IFC() and IFN() function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/ifc_and_ifn_function.sas)
 - Array in Datastep [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/an_array_in_a_datastep.sas)
-
+- List of files in a directory [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets/list_of_files_in_a_directory.sas)
