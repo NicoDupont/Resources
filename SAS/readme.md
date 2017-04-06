@@ -2,7 +2,7 @@
 ![](https://support.sas.com/images/SAS_TPTK_logo.gif) 
 ---
 
-For each resource, you have a markdown file and a .sas file
+For each resource, you have a markdown file and/or a .sas file
 
 **Various :**  
 
