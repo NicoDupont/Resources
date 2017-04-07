@@ -6,6 +6,7 @@
 ' Tested on Excel 2010           
 '--------------------------------------
 
+Option Explicit
 '-------------------------------------------------
 ' The function NumWeekYearEuro returns the week number of the year for a date.
 ' Here I use the european compute parameter. (21)
