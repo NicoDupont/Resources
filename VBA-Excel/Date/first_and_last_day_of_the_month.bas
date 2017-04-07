@@ -6,6 +6,8 @@
 ' Tested on Excel 2010           
 '--------------------------------------
 
+
+Option Explicit
 '-------------------------------------------------
 ' The function BeginMonth returns the first day of the month
 ' of the date passed as a parameter.
