@@ -9,7 +9,7 @@
 '-------------------------------------------------
 ' The function NumWeekYearEur returns the week number of the year for the date in parameter.
 ' here I use the european compute parameter
-' If there is no parameter, then function return the number the week number of the year for the current day
+' If there is no parameter, then function return the week number of the year for the current day
 '-------------------------------------------------
 
 Function NumWeekYearEur(Optional DateDay As Date) As Integer
@@ -22,7 +22,7 @@ End Function
 '-------------------------------------------------
 ' The function NumWeekYearDefault returns the week number of the year for the date in parameter.
 ' here I use the default compute parameter (not european)
-' If there is no parameter, then function return the number the week number of the year for the current day
+' If there is no parameter, then function return the week number of the year for the current day
 '-------------------------------------------------
 
 Function NumWeekYearDefault(Optional DateDay As Date) As Integer
