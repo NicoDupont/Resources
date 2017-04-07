@@ -1,15 +1,15 @@
 /*------------------------------------*/
 /* Creation date : 06/04/2017  (fr)   */
-/* Last update :   06/04/2017  (fr)   */
+/* Last update :   07/04/2017  (fr)   */
 /* Author(s) : Nicolas DUPONT         */
-/* Contributor(s) : 		              */
-/* Not Tested                         */
+/* Contributor(s) : 		        */
+/* Tested  on SAS 9.3                 */
 /*------------------------------------*/
 
 
 /* The code above list all the file in a directory and put results in a SAS dataset :*/
 
-filename REP &REP.;
+filename REP "&PATH.";
 
 data TABLE(keep = files);
      length fichier $50;
