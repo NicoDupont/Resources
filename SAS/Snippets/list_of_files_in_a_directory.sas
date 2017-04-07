@@ -9,6 +9,8 @@
 
 /* The code above list all the file in a directory and put results in a SAS dataset :*/
 
+%LET PATH=;
+
 filename REP "&PATH.";
 
 data TABLE(keep = files);
