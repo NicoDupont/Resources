@@ -9,7 +9,7 @@
 '-------------------------------------------------
 ' The function BeginMonth returns the first day of the month
 ' of the date passed as a parameter.
-' If there is no parameter, the function return the first day of the current month
+' If there is no parameter, the function returns the first day of the current month
 '-------------------------------------------------
 
 Function BeginMonth(Optional DateDay As Date) As Date
@@ -25,7 +25,7 @@ End Function
 '-------------------------------------------------
 ' The function EndMonth returns the last day of the month
 ' of the date passed as a parameter.
-' If there is no parameter, the function return the last day of the current month
+' If there is no parameter, the function returns the last day of the current month
 '-------------------------------------------------
 
 Function EndMonth(Optional DateDay As Date) As Date
