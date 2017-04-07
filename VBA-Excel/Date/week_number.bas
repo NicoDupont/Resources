@@ -7,22 +7,22 @@
 '--------------------------------------
 
 '-------------------------------------------------
-' The function NumWeekYearEur returns the week number of the year for the date in parameter.
-' here I use the european compute parameter
-' If there is no parameter, then function return the week number of the year for the current day
+' The function NumWeekYearEuro returns the week number of the year for a date.
+' Here I use the european compute parameter. (21)
+' If there is no parameter, the function returns the week number of the year for the current day.
 '-------------------------------------------------
 
-Function NumWeekYearEur(Optional DateDay As Date) As Integer
+Function NumWeekYearEuro(Optional DateDay As Date) As Integer
     If DateDay = "00:00:00" Then DateDay = Date
     ' =NO.SEMAINE(DateDay;21) => FR function available directly in excel
     ' Format(DateDay, "ww") => another way
-    NumWeekYearEur = WorksheetFunction.WeekNum(DateDay, 21)
+    NumWeekYearEuro = WorksheetFunction.WeekNum(DateDay, 21)
 End Function
 
 '-------------------------------------------------
-' The function NumWeekYearDefault returns the week number of the year for the date in parameter.
-' here I use the default compute parameter (not european)
-' If there is no parameter, then function return the week number of the year for the current day
+' The function NumWeekYearDefault returns the week number of the year for a date.
+    ' Here I use the default compute parameter (not european). (1)
+' If there is no parameter, the function returns the week number of the year for the current day.
 '-------------------------------------------------
 
 Function NumWeekYearDefault(Optional DateDay As Date) As Integer
