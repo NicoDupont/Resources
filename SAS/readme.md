@@ -21,3 +21,9 @@ In the data folder, some datasets are available.
 - 4 ways to delete sas datasets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/delete_dataset.md)
 - Test if a variable exist or not [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/var_exist.md)
 - Export a dataset to a flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_text_file.sas)
+
+
+
+**Date :**
+
+- Quarter and Semester function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/quarter_and_semester_function.sas)
