@@ -1,8 +1,8 @@
 /*------------------------------------*/
 /* Creation date : 09/04/2017  (fr)   */
 /* Last update :   09/04/2017  (fr)   */
-/* Author(s) : 						  */
-/* Contributor(s) : 		          */
+/* Author(s) : 						            */
+/* Contributor(s) : 		              */
 /* Tested on SAS Studio 9.4           */
 /*------------------------------------*/
 
@@ -10,15 +10,15 @@ data test_email;
    informat email $32.;
    input email;
    datalines;
-test@test.fr
-Test@test.fr
-test@test..fr
-.test@test.fr
-.test@@test.fr
-test@test
-@test.fr
-1.test@test.fr
-n.test@test.fr
+      test@test.fr
+      Test@test.fr
+      test@test..fr
+      .test@test.fr
+      .test@@test.fr
+      test@test
+      @test.fr
+      1.test@test.fr
+      n.test@test.fr
 ;
 run;
 
@@ -36,8 +36,7 @@ proc fcmp outlib=work.cat_function.test ;
                        "(?:[a-z0-9-]*[a-z0-9])?" !!
                        "/"
                        ,
-                       lowcase(mail)
-                       );
+                       lowcase(mail));
 	return(res);
 	endsub;
 run;
