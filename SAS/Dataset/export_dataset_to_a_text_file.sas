@@ -13,7 +13,8 @@
 	    OUTFILE ="&Path./&NameOutput..&Extension."
 	    REPLACE
 	    DBMS = DLM REPLACE;
-		DELIMITER = &Dlm;
+	    DELIMITER = &Dlm;
+	    /*putnames=no; => do not write column/variable name */	
 	RUN;
 %mend;
 
