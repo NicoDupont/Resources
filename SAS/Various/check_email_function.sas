@@ -1,29 +1,33 @@
 /*------------------------------------*/
 /* Creation date : 09/04/2017  (fr)   */
 /* Last update :   09/04/2017  (fr)   */
-/* Author(s) : Nicolas DUPONT         */
-/* Contributor(s) : 		      */
-/* Tested on SAS 9.3                  */
+/* Author(s) : 						  */
+/* Contributor(s) : 		          */
+/* Tested on SAS Studio 9.4           */
 /*------------------------------------*/
 
-/*
-https://sites.google.com/site/lecoindudeveloppeursas/tutoriels-sas/creer-une-fonction-avec-sas
-*/
-
-data liste_email;
+data test_email;
    informat email $32.;
    input email;
    datalines;
-clark.kent@daily-planet.com
-B.wayne@batm.fr
-greenl@supercom
+test@test.fr
+Test@test.fr
+test@test..fr
+.test@test.fr
+.test@@test.fr
+test@test
+@test.fr
+1.test@test.fr
+n.test@test.fr
 ;
+run;
 
-/* Vérification des emails */
+/* Check if email is ok or not : */
 
-data validation_email;
-   set liste_email;
-   rfc=prxmatch("/^" !!
+proc fcmp outlib=work.cat_function.test ;
+	function CheckMail(Email $);
+		mail=Email;
+		res = prxmatch("/^" !!
                        "[a-z0-9#\$%&'*+\/=\]+?^_`\{|\}~-]+" !!
                        "(?:\.[a-z0-9!#\$%&'*+\/=?^_`\{|\}~-]+)*" !!
                        "@" !!
@@ -32,6 +36,15 @@ data validation_email;
                        "(?:[a-z0-9-]*[a-z0-9])?" !!
                        "/"
                        ,
-                       email
+                       lowcase(mail)
                        );
+	return(res);
+	endsub;
+run;
+
+/*options cmplib=work.cat_function;*/
+
+data test_email;
+   set test_email;
+   Cmail=CheckMail(email);
 run;
