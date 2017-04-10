@@ -6,10 +6,9 @@
 ' Tested on Excel 2010
 '----------------------------------
 
-
 '-------------------------------------------------
 ' The function AddDay returns the date increased or decreased by the number of days passed in parameter.
-' If there is no parameter, the function increased or decreased the current date
+' If there is no dateday parameter, the function increased or decreased the current date
 ' If there is no Cpt parameter, just the current date or the date in parameter without modification is returned.
 '-------------------------------------------------
 
@@ -21,7 +20,7 @@ End Function
 
 '-------------------------------------------------
 ' The function AddMonth returns the date increased or decreased by the number of months passed in parameter.
-' If there is no parameter, the function increased or decreased the current date
+        ' If there is no dateday parameter, the function increased or decreased the current date
 ' If there is no Cpt parameter, just the current date or the date in parameter without modification is returned.
 '-------------------------------------------------
 
@@ -33,7 +32,7 @@ End Function
 
 '-------------------------------------------------
 ' The function AddYear returns the date increased or decreased by the number of days passed in parameter.
-' If there is no parameter, the function increased or decreased the current date
+' If there is no dateday parameter, the function increased or decreased the current date
 ' If there is no Cpt parameter, just the current date or the date in parameter without modification is returned.
 '-------------------------------------------------
 
