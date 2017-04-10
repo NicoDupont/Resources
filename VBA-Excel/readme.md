@@ -11,6 +11,7 @@ For each resource, you have a markdown file or a .bas(vb) file
 - Quarter and Semester for a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/quarter_and_semester.bas)
 - Month in string for a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/month.bas)
 - Day in string [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/day.bas)
+- Add day, month year to a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/add_day_month_year.bas)
 
 
 
