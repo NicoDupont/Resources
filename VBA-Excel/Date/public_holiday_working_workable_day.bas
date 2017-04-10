@@ -1,6 +1,6 @@
 '-------------------------------------
-' Creation date : 09/04/2017  (fr)  
-' Last update :   09/04/2017  (fr) 
+' Creation date : 10/04/2017  (fr)  
+' Last update :   10/04/2017  (fr) 
 ' Author(s) : Nicolas DUPONT       
 ' Contributor(s) : 		         
 ' Tested on Excel 2010          
