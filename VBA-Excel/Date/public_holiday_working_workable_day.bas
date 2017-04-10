@@ -96,7 +96,7 @@ End Function
 ' If there is no DateDay parameter, the function returns the next Working Day for the current date.
 '-------------------------------------------------
 
-Function NextWorkingDayFr(Optional DateDay As Date) As Date
+Function NextWorkingDay(Optional DateDay As Date) As Date
     If DateDay = "00:00:00" Then DateDay = Date
     Dim res As Date
     Dim wda As Byte, wda1 As Byte, wda2 As Byte, wda3 As Byte, wda4 As Byte
@@ -118,7 +118,7 @@ Function NextWorkingDayFr(Optional DateDay As Date) As Date
                     ElseIf wda4 = 1 Then
                                     res = DateDay + 4
     End If
-    NextWorkingDayFr = res
+    NextWorkingDay = res
 End Function
 
 
@@ -128,7 +128,7 @@ End Function
 ' If there is no DateDay parameter, the function returns the next Workable Day for the current date.
 '-------------------------------------------------
 
-Function NextWorkableDayFr(Optional DateDay As Date) As Date
+Function NextWorkableDay(Optional DateDay As Date) As Date
     If DateDay = "00:00:00" Then DateDay = Date
     Dim res As Date
     Dim wda As Byte, wda1 As Byte, wda2 As Byte, wda3 As Byte
@@ -147,6 +147,6 @@ Function NextWorkableDayFr(Optional DateDay As Date) As Date
                 ElseIf wda3 = 1 Then
                                 res = DateDay + 3
     End If
-    NextWorkableDayFr = res
+    NextWorkableDay = res
 End Function
 
