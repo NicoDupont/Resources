@@ -23,6 +23,7 @@ In the data folder, some datasets are available.
 - Test if a variable exist or not [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/var_exist.md)
 - Export a dataset to a flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_text_file.sas)
 - Put a prefix on variables [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/prefix_on_variable.sas)
+- Append two datasteps [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/append_dataset.sas)
 
 
 
