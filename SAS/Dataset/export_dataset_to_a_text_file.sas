@@ -13,7 +13,7 @@
 	    OUTFILE ="&Path./&NameOutput..&Extension."
 	    REPLACE
 	    DBMS = DLM REPLACE
-	    /*LABEL*/; /* use LABEL if you the header row to contain variable labels instead of variable names */
+	    /*LABEL*/; /* use LABEL if you want the header row to contain variable labels instead of variable names */
 	    DELIMITER = &Dlm;
 	    /*putnames=no; => do not write column/variable name */	
 	RUN;
