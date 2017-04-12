@@ -13,7 +13,7 @@ An example is provided if possible.
 - Month in string for a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/month.bas)
 - Day in string [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/day.bas)
 - Add day, month, year to a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/add_day_month_year.bas)
-- Check if a day is a public holiday, working day, workable day and compute next working/workable day if is not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/public_holiday_working_workable_day.bas)
+- Functions about public holiday, working day, workable day [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/public_holiday_working_workable_day.bas)
 
 
 
