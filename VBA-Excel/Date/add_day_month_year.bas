@@ -1,9 +1,19 @@
 '----------------------------------
 ' Creation date : 10/04/2017  (fr)
-' Last update :   10/04/2017  (fr)
+' Last update :   12/04/2017  (fr)
 ' Author(s) : Nicolas DUPONT
 ' Contributor(s) :
 ' Tested on Excel 2010
+'----------------------------------
+
+'----------------------------------
+' List of functions :
+' - 1 - AddDay
+' - 2 - AddMonth
+' - 3 - AddYear
+' - 4 - DateDiffDay
+' - 5 - DateDiffMonth
+' - 6 - DateDiffYear
 '----------------------------------
 
 '-------------------------------------------------
@@ -40,4 +50,40 @@ Function AddYear(Optional DateDay As Date, Optional Cpt As Integer) As Date
     If DateDay = "00:00:00" Then DateDay = Date
     If TypeName(Cpt) <> "Integer" Then Cpt = 0
     AddYear = DateAdd("yyyy", Cpt, DateDay)
+End Function
+
+                    
+ '-------------------------------------------------
+' The function DateDiffDay returns the number of days between the two dates in parameters.
+'-------------------------------------------------
+
+Function DateDiffDay(DateFirst As Date, DateLast As Date) As Integer
+    Dim res As Integer
+    Dim da As Date
+    res = DateDiff("d", DateFirst, DateLast)
+    DateDiffDay = res
+End Function
+
+
+'-------------------------------------------------
+' The function DateDiffMonth returns the number of months between the two dates in parameters.
+'-------------------------------------------------
+
+Function DateDiffMonth(DateFirst As Date, DateLast As Date) As Integer
+    Dim res As Integer
+    Dim da As Date
+    res = DateDiff("m", DateFirst, DateLast)
+    DateDiffMonth = res
+End Function
+
+
+'-------------------------------------------------
+' The function DateDiffYear returns the number of years between the two dates in parameters.
+'-------------------------------------------------
+
+Function DateDiffYear(DateFirst As Date, DateLast As Date) As Integer
+    Dim res As Integer
+    Dim da As Date
+    res = DateDiff("yyyy", DateFirst, DateLast)
+    DateDiffYear = res
 End Function
