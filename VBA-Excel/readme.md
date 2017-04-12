@@ -2,7 +2,7 @@
 ### VBA - Excel
 ---
 
-For each resource, you have a .bas(vb) file.
+For each resource, you have a .bas(vb) file.  
 An example is provided if possible.
 
 #### Date Function
