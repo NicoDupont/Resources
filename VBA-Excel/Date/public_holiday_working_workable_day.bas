@@ -1,6 +1,6 @@
 '-------------------------------------
 ' Creation date : 10/04/2017  (fr)  
-' Last update :   10/04/2017  (fr) 
+' Last update :   12/04/2017  (fr) 
 ' Author(s) : Nicolas DUPONT       
 ' Contributor(s) : 		         
 ' Tested on Excel 2010          
@@ -8,14 +8,22 @@
 
 '-------------------------------------
 ' List of functions :
-' - 1 - PublicHolidayFr
-' - 2 - WorkingDay
-' - 3 - WorkableDay
-' - 4 - NextWorkingDay
-' - 5 - NextWorkableDay
-' - 6 - PrevWorkingDay
-' - 7 - PrevWorkableDay
-' - 8 - NextPublicHoliday
+' - 1  - PublicHolidayFr
+' - 2  - WorkingDay
+' - 3  - WorkableDay
+' - 4  - NextWorkingDay
+' - 5  - NextWorkableDay
+' - 6  - PrevWorkingDay
+' - 7  - PrevWorkableDay
+' - 8  - NextPublicHoliday
+' - 9  - FirstWorkingDayMonth
+' - 10 - FirstWorkableDayMonth
+' - 11 - LastWorkingDayMonth
+' - 12 - LastWorkableDayMonth
+' - 13 - NumberWorkingDayMonth
+' - 14 - NumberWorkableDayMonth
+' - 15 - NumberWorkingDay
+' - 16 - NumberWorkableDay
 '-------------------------------------
 
 
@@ -228,3 +236,152 @@ Function NextPublicHoliday(Optional DateDay As Date) As Date
     NextPublicHoliday = res
 End Function
 
+   
+                                
+'-------------------------------------------------
+' The function FirstWorkingDayMonth returns the first working day for a month in parameter.
+' If there is no DateDay parameter, the function returns the first working day for the current month.
+'-------------------------------------------------
+
+Function FirstWorkingDayMonth(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date, fday As Date
+    Dim fdaywd As Byte
+    fday = BeginMonth(DateDay)
+    fdaywd = WorkingDay(fday)
+    If fdaywd = 1 Then
+                        res = fday
+        Else
+            res = NextWorkingDay(fday)
+    End If
+    FirstWorkingDayMonth = res
+End Function
+
+                                    
+'-------------------------------------------------
+' The function FirstWorkableDayMonth returns the first working day for a month in parameter.
+' If there is no DateDay parameter, the function returns the first workable day for the current month.
+'-------------------------------------------------
+
+Function FirstWorkableDayMonth(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date, fday As Date
+    Dim fdaywd As Byte
+    fday = BeginMonth(DateDay)
+    fdaywd = WorkableDay(fday)
+    If fdaywd = 1 Then
+                        res = fday
+        Else
+            res = NextWorkableDay(fday)
+    End If
+    FirstWorkableDayMonth = res
+End Function
+
+'-------------------------------------------------
+' The function LastWorkingDayMonth returns the first working day for a month in parameter.
+' If there is no DateDay parameter, the function returns the first working day for the current month.
+'-------------------------------------------------
+
+Function LastWorkingDayMonth(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date, lday As Date
+    Dim ldaywd As Byte
+    lday = EndMonth(DateDay)
+    ldaywd = WorkingDay(lday)
+    If ldaywd = 1 Then
+                        res = lday
+        Else
+            res = PrevWorkingDay(lday)
+    End If
+    LastWorkingDayMonth = res
+End Function
+
+                                            
+'-------------------------------------------------
+' The function LastWorkableDayMonth returns the first working day for a month in parameter.
+' If there is no DateDay parameter, the function returns the first workable day for the current month.
+'-------------------------------------------------
+
+Function LastWorkableDayMonth(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date, lday As Date
+    Dim ldaywd As Byte
+    lday = EndMonth(DateDay)
+    ldaywd = WorkableDay(lday)
+    If ldaywd = 1 Then
+                        res = lday
+        Else
+            res = PrevWorkableDay(lday)
+    End If
+    LastWorkableDayMonth = res
+End Function
+                                                
+               
+'-------------------------------------------------
+' The function NumberWorkinDayMonth returns the number of working day in the month for the date in parameter.
+' If there is no DateDay parameter, the function returns the number of working day for the current month.
+'-------------------------------------------------
+
+Function NumberWorkinDayMonth(Optional DateDay As Date) As Integer
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Integer
+    Dim fday As Date, lday As Date
+    fday = BeginMonth(DateDay)
+    lday = EndMonth(DateDay)
+    Dim da As Date
+    res = 0
+    For da = fday To lday
+        If WorkingDay(da) = 1 Then res = res + 1
+    Next da
+    NumberWorkinDayMonth = res
+End Function
+
+                                                    
+'-------------------------------------------------
+' The function NumberWorkableDayMonth returns the number of workable day in the month for the date in parameter.
+' If there is no DateDay parameter, the function returns the number of workable day for the current month.
+'-------------------------------------------------
+
+Function NumberWorkableDayMonth(Optional DateDay As Date) As Integer
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Integer
+    Dim fday As Date, lday As Date
+    fday = BeginMonth(DateDay)
+    lday = EndMonth(DateDay)
+    Dim da As Date
+    res = 0
+    For da = fday To lday
+        If WorkableDay(da) = 1 Then res = res + 1
+    Next da
+    NumberWorkableDayMonth = res
+End Function
+
+
+'-------------------------------------------------
+' The function NumberWorkinDayMonth returns the number of working day between the two dates in parameters.
+'-------------------------------------------------
+
+Function NumberWorkinDay(DateFirst As Date, DateLast As Date) As Integer
+    Dim res As Integer
+    Dim da As Date
+    res = 0
+    For da = DateFirst To DateLast
+        If WorkingDay(da) = 1 Then res = res + 1
+    Next da
+    NumberWorkinDay = res
+End Function
+
+                                                        
+'-------------------------------------------------
+' The function NumberWorkableDayMonth returns the number of workable day between the two dates in parameters.
+'-------------------------------------------------
+
+Function NumberWorkableDay(DateFirst As Date, DateLast As Date) As Integer
+    Dim res As Integer
+    Dim da As Date
+    res = 0
+    For da = DateFirst To DateLast
+        If WorkableDay(da) = 1 Then res = res + 1
+    Next da
+    NumberWorkableDay = res
+End Function
