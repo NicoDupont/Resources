@@ -6,6 +6,20 @@
 ' Tested on Excel 2010          
 '-------------------------------------
 
+'-------------------------------------
+' List of functions :
+' - 1 - PublicHolidayFr
+' - 2 - WorkingDay
+' - 3 - WorkableDay
+' - 4 - NextWorkingDay
+' - 5 - NextWorkableDay
+' - 6 - PrevWorkingDay
+' - 7 - PrevWorkableDay
+' - 8 - NextPublicHoliday
+'-------------------------------------
+
+
+
 option explicit
 '-------------------------------------------------
 ' The function PublicHolidayFr returns 1 if the date is a public holiday.
@@ -105,8 +119,6 @@ Function NextWorkingDay(Optional DateDay As Date) As Date
     wda2 = WorkingDay(DateDay + 2)
     wda3 = WorkingDay(DateDay + 3)
     wda4 = WorkingDay(DateDay + 4)
-    Dim nda As Byte
-    nda = Weekday(DateDay, vbMonday)
     If wda = 1 Then
                     res = DateDay
         ElseIf wda1 = 1 Then
@@ -136,8 +148,6 @@ Function NextWorkableDay(Optional DateDay As Date) As Date
     wda1 = WorkableDay(DateDay + 1)
     wda2 = WorkableDay(DateDay + 2)
     wda3 = WorkableDay(DateDay + 3)
-    Dim nda As Byte
-    nda = Weekday(DateDay, vbMonday)
     If wda = 1 Then
                     res = DateDay
         ElseIf wda1 = 1 Then
@@ -148,5 +158,73 @@ Function NextWorkableDay(Optional DateDay As Date) As Date
                                 res = DateDay + 3
     End If
     NextWorkableDay = res
+End Function
+                    
+                    
+'-------------------------------------------------
+' The function PrevWorkableDay returns the previous Workable Day for the date in parameter.
+' If there is no DateDay parameter, the function returns the previous Workable Day for the current date.
+'-------------------------------------------------
+
+Function PrevWorkableDay(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date
+    Dim wda1 As Byte, wda2 As Byte, wda3 As Byte
+    wda1 = WorkableDay(DateDay - 1)
+    wda2 = WorkableDay(DateDay - 2)
+    wda3 = WorkableDay(DateDay - 3)
+    If wda1 = 1 Then
+                    res = DateDay - 1
+        ElseIf wda2 = 1 Then
+                        res = DateDay - 2
+            ElseIf wda3 = 1 Then
+                            res = DateDay - 3
+    End If
+    PrevWorkableDay = res
+End Function
+
+
+
+'-------------------------------------------------
+' The function PrevWorkingDay returns the previous Working Day for the date in parameter.
+' If there is no DateDay parameter, the function returns the previous Working Day for the current date.
+'-------------------------------------------------
+
+Function PrevWorkingDay(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date
+    Dim wda1 As Byte, wda2 As Byte, wda3 As Byte, wda4 As Byte
+    wda1 = WorkableDay(DateDay - 1)
+    wda2 = WorkableDay(DateDay - 2)
+    wda3 = WorkableDay(DateDay - 3)
+    wda4 = WorkableDay(DateDay - 4)
+    If wda1 = 1 Then
+                    res = DateDay - 1
+        ElseIf wda2 = 1 Then
+                        res = DateDay - 2
+            ElseIf wda3 = 1 Then
+                            res = DateDay - 3
+                ElseIf wda4 = 1 Then
+                                res = DateDay - 4
+    End If
+    PrevWorkingDay = res
+End Function
+
+
+
+'-------------------------------------------------
+' The function NextPublicHoliday returns the next public holiday for the date in parameter.
+' If there is no DateDay parameter, the function returns the next public holiday for the current date.
+'-------------------------------------------------
+
+Function NextPublicHoliday(Optional DateDay As Date) As Date
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim res As Date
+    Dim i As Integer
+    For i = 1 To 365 Step 1  'Normally, it is impossible to go as far as 365
+        If PublicHolidayFr(DateDay + i) = 1 Then Exit For
+    Next i
+    res = DateDay + i
+    NextPublicHoliday = res
 End Function
 
