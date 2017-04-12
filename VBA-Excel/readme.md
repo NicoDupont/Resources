@@ -7,6 +7,8 @@ An example is provided if possible.
 
 #### Various :
 
+- Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
+
 #### Date :
 
 - First and last day of the month for a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/first_and_last_day_of_the_month.bas)
