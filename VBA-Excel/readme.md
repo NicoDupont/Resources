@@ -5,7 +5,9 @@
 For each resource, you have a .bas(vb) file.  
 An example is provided if possible.
 
-#### Date Function
+#### Various :
+
+#### Date :
 
 - First and last day of the month for a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/first_and_last_day_of_the_month.bas)
 - Week Number for a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/week_number.bas)
