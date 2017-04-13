@@ -140,7 +140,7 @@ End Sub
 
 '--------------------------------
 ' I modified the code to write directly in utf-8 with another method.
-' You must activate a "Reference". For me it was : "Microsoft ActiveX Datobjects 6.1 Library"
+' You must activate a "Reference" : Microsoft ActiveX Data Objects (ADO)
 ' Inspiration (Thanks for the help) : http://developer.rhino3d.com/guides/rhinoscript/read-write-utf8/
 '--------------------------------
 
@@ -214,6 +214,5 @@ Sub range_to_json_timelinejs_utf8()
     fs.SaveToFile "PathToYourJsonFile.json", 2
 
     Set fs = Nothing
-
 
 End Sub
