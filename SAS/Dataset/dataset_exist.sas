@@ -14,7 +14,7 @@
     %if %sysfunc(EXIST(%sysfunc(compress(&LIB..&TABLE.)))) ne 1 
 		%then %LET DatasetExist=0;
 		%else %LET DatasetExist=1;
- 	%put DatasetExist : &DatasetExist;
+ 	/*%put DatasetExist : &DatasetExist;*/
     %if %eval(&datasetexist)>0 
 	%then %do;
 		%put --------------------------;
@@ -34,6 +34,16 @@ run;
 
 /*ok*/
 %DatasetExist(LIB=WORK,TABLE=CARS);
+/* Log result :
+--------------------------
+The dataset : WORK.CARS exist
+--------------------------
+*/
 
 /*ko*/
 %DatasetExist(LIB=WORK,TABLE=CARSS);
+/* Log result :
+--------------------------
+The dataset : WORK.CARSS don't exist
+--------------------------
+*/
