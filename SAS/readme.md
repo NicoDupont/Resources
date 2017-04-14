@@ -32,3 +32,4 @@ In the data folder, some datasets are available.
 
 - Quarter and Semester function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/quarter_and_semester_function.sas)
 - Month [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/month.sas)
+- Week number of the year [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/week_number.sas)
