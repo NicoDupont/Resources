@@ -31,3 +31,4 @@ In the data folder, some datasets are available.
 **Date :**
 
 - Quarter and Semester function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/quarter_and_semester_function.sas)
+- Month [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/month.sas)
