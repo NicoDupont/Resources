@@ -8,7 +8,7 @@
 
 /* 
 A macro to test if a column:variable exist or not on a SAS dataset :
-The macro return "0" if not and a "number" > 0  if the column:variable exist.
+The macro returns "0" if not and a "number" > 0  if the column:variable exist.
 We use the macro-variable : "varexist" to use the result from the macro in the main program.
 */
 
