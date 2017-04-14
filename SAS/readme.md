@@ -34,3 +34,4 @@ In the data folder, some datasets are available.
 - Month  in string [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/month.sas)
 - Day in string [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/day.sas)
 - Week number of the year [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/week_number.sas)
+- First and last day of the month [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/first_and_last_day_of_the_month.sas)
