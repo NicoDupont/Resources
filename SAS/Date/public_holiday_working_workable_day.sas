@@ -23,8 +23,8 @@
 ' - 12 - LastWorkableDayMonth() --- returns the last workable day of the month.
 ' - 13 - NumberWorkingDayMonth() -- returns the number of working days of the month.
 ' - 14 - NumberWorkableDayMonth() - returns the number of workable days of the month.
-' - 15 - NumberWorkingDay() ------- returns the number of working days between two dates.	
-' - 16 - NumberWorkableDay() ------ returns the number of workable days between two dates.	  
+' - 15 - NumberWorkingDay() ------- returns the number of working days between two dates.
+' - 16 - NumberWorkableDay() ------ returns the number of workable days between two dates.
 */
 /*------------------------------------*/
 
@@ -38,7 +38,7 @@ data test;
 		01JAN2017 05FEB2017
 		15FEB2017 05MAR2017
 		15FEB2016 05MAR2018
-		08JAN2017 06JUL2017 
+		08JAN2017 06JUL2017
 		09JAN2017 19AUG2017
 		25DEC2017 23SEP2017
 		31DEC2017 13NOV2017
@@ -119,16 +119,16 @@ run;
 
 proc fcmp outlib=work.cat_function.test;
 	function WorkingDay(DateDay);
-		nd = WEEKDAY(DateDay); 
+		nd = WEEKDAY(DateDay);
 		ph = PublicHolidayFr(DateDay);
 				res = 1;
-		if nd = 1 
-			then 
-				nd = 7; 
-			else 
+		if nd = 1
+			then
+				nd = 7;
+			else
 				nd +- 1;
 		if nd = 7 or nd = 6 or ph = 1
-			then 
+			then
 				res = 0;;
 		return(res);
 	endsub;
@@ -141,16 +141,16 @@ run;
 proc fcmp outlib=work.cat_function.test;
 	function WorkableDay(DateDay);
 		nd = WEEKDAY(DateDay);
-		ph = PublicHolidayFr(DateDay); 
+		ph = PublicHolidayFr(DateDay);
 		res = 1;
-		if nd = 1 
-			then 
-				nd = 7; 
-			else 
+		if nd = 1
+			then
+				nd = 7;
+			else
 				nd +- 1;
 		if nd = 7 or ph = 1
-			then 
-				res = 0; 
+			then
+				res = 0;
 		return(res);
 	endsub;
 run;
@@ -169,7 +169,7 @@ run;
 
 proc fcmp outlib=work.cat_function.test;
 	function NextWorkingDay(DateDay);
-		if WorkingDay(DateDay) = 1 
+		if WorkingDay(DateDay) = 1
 			then res = DateDay;
 			else if  WorkingDay(DateDay+1) = 1
 				then res = DateDay+1;
@@ -188,7 +188,7 @@ run;
 
 proc fcmp outlib=work.cat_function.test;
 	function NextWorkableDay(DateDay);
-		if WorkableDay(DateDay) = 1 
+		if WorkableDay(DateDay) = 1
 			then res = DateDay;
 			else if  WorkableDay(DateDay+1) = 1
 				then res = DateDay+1;
@@ -214,7 +214,7 @@ run;
 
 proc fcmp outlib=work.cat_function.test;
 	function PrevWorkingDay(DateDay);
-		if WorkingDay(DateDay-1) = 1 
+		if WorkingDay(DateDay-1) = 1
 			then res = DateDay-1;
 			else if  WorkingDay(DateDay-2) = 1
 				then res = DateDay-2;
@@ -233,7 +233,7 @@ run;
 
 proc fcmp outlib=work.cat_function.test;
 	function PrevWorkableDay(DateDay);
-		if WorkableDay(DateDay-1) = 1 
+		if WorkableDay(DateDay-1) = 1
 			then res = DateDay-1;
 			else if  WorkableDay(DateDay-2) = 1
 				then res = DateDay-2;
@@ -262,9 +262,9 @@ proc fcmp outlib=work.cat_function.test;
 		do i = 1 to 365;
 			/*put i=;*/
 			if PublicHolidayFr(DateDay + i) = 1
-				then do; 
-					res = DateDay + i; 
-					goto exitloop; 
+				then do;
+					res = DateDay + i;
+					goto exitloop;
 				end;
 		end;
 		exitloop:
@@ -283,27 +283,136 @@ run;
 /*  9 - FirstWorkingDayMonth()    	   */
 /*-------------------------------------*/
 
-in progress..
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function FirstWorkingDayMonth(DateDay);
+		fd = BeginMonth(DateDay);
+		res = NextWorkingDay(fd);
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format FirstWkingDayMonth DATE9.;
+	FirstWkingDayMonth=FirstWorkingDayMonth(date);
+run;
 
 /*-------------------------------------*/
 /*  10 - FirstWorkableDayMonth()       */
 /*-------------------------------------*/
 
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function FirstWorkableDayMonth(DateDay);
+		fd = BeginMonth(DateDay);
+		res = NextWorkableDay(fd);
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format FirstWkableDayMonth DATE9.;
+	FirstWkableDayMonth=FirstWorkableDayMonth(date);
+run;
+
 /*-------------------------------------*/
 /*  11 - LastWorkingDayMonth()    	   */
 /*-------------------------------------*/
+
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function LastWorkingDayMonth(DateDay);
+		ld = EndMonth(DateDay);
+		ldwd = WorkingDay(ld);
+		if ldwd = 1
+			then
+				res = ld;
+			else
+				res = PrevWorkingDay(ld);
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format LastWkingDayMonth DATE9.;
+	LastWkingDayMonth=LastWorkingDayMonth(date);
+run;
 
 /*-------------------------------------*/
 /*  12 - LastWorkableDayMonth()        */
 /*-------------------------------------*/
 
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function LastWorkableDayMonth(DateDay);
+		ld = EndMonth(DateDay);
+		ldwd = WorkableDay(ld);
+		if ldwd = 1
+			then
+				res = ld;
+			else
+				res = PrevWorkableDay(ld);
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format LastWkableDayMonth DATE9.;
+	LastWkableDayMonth=LastWorkableDayMonth(date);
+run;
+
 /*-------------------------------------*/
 /*  13 - NumberWorkingDayMonth()       */
 /*-------------------------------------*/
 
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function NumberWorkingDayMonth(DateDay);
+
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format NbWkingDayMonth DATE9.;
+	NbWkingDayMonth=NumberWorkingDayMonth(date);
+run;
+
+
 /*-------------------------------------*/
 /*  14 - NumberWorkableDayMonth()      */
 /*-------------------------------------*/
+
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function NumberWorkableDayMonth(DateDay);
+
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format NbWkableDayMonth DATE9.;
+	NbWkableDayMonth=NumberWorkableDayMonth(date);
+run;
 
 /*-------------------------------------*/
 /*  15 - NumberWorkingDay()      	   */
