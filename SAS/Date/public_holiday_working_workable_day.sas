@@ -99,7 +99,6 @@ proc fcmp outlib=work.cat_function.test;
 				when (Pa+39 = DateDay) res = 1; /* Ascension */
 				when (Pa+49 = DateDay) res = 1; /* Pentecôte */
 				when (Pa+50 = DateDay) res = 1; /* Lundi de Pentecôte */
-				otherwise put 'Not a date !';
 		end;
 		return(res);
 	endsub;
@@ -258,9 +257,33 @@ run;
 /*  8 - NextPublicHoliday()    		   */
 /*-------------------------------------*/
 
+proc fcmp outlib=work.cat_function.test;
+	function NextPublicHoliday(DateDay);
+		do i = 1 to 365;
+			/*put i=;*/
+			if PublicHolidayFr(DateDay + i) = 1
+				then do; 
+					res = DateDay + i; 
+					goto exitloop; 
+				end;
+		end;
+		exitloop:
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	format NextPubHol DATE9.;
+	NextPubHol=NextPublicHoliday(date);
+run;
+
 /*-------------------------------------*/
 /*  9 - FirstWorkingDayMonth()    	   */
 /*-------------------------------------*/
+
+in progress..
 
 /*-------------------------------------*/
 /*  10 - FirstWorkableDayMonth()       */
@@ -283,7 +306,7 @@ run;
 /*-------------------------------------*/
 
 /*-------------------------------------*/
-/*  15 - NumberWorkingDay()    		*/
+/*  15 - NumberWorkingDay()      	   */
 /*-------------------------------------*/
 
 /*-------------------------------------*/
