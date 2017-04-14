@@ -25,7 +25,7 @@ run;
 /* Export : */
 data _NULL_;
 set work.test;
-file "Path/test.txt" /*dlm="something-here"*/;
+file "Path/test.txt" /*dlm="something-here" there are others options */;
 if _N_ >= 1 then do;
 	put @1 id 3. 
 		@5 name $10. 
