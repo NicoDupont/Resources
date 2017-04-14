@@ -21,6 +21,7 @@ In the data folder, some datasets are available.
 
 - 4 ways to delete sas datasets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/delete_dataset.md)
 - Test if a variable/column exist or not [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/var_exist.md)
+- Test if a SAS dataset exist or not [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/dataset_exist.sas)
 - Export a dataset to a delimited flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_text_file.sas)
 - Export a dataset to a structured flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_structured_flat_file.sas)
 - Put a prefix on variables/columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/prefix_on_variable.sas)
