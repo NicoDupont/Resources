@@ -21,6 +21,6 @@
 
 
 /* Examples */
-%DelimTextFileExport(SASHELP.CARS,$SASGRP/DUPONTNI,CARS_CSV,csv,';')
-%DelimTextFileExport(SASHELP.CARS,$SASGRP/DUPONTNI,CARS_CSV2,csv,',')
-%DelimTextFileExport(SASHELP.CARS,$SASGRP/DUPONTNI,CARS_TXT,txt,'|')
+%DelimTextFileExport(SASHELP.CARS,DestinationFolder,CARS_CSV,csv,';')
+%DelimTextFileExport(SASHELP.CARS,DestinationFolder,CARS_CSV2,csv,',')
+%DelimTextFileExport(SASHELP.CARS,DestinationFolder,CARS_TXT,txt,'|')
