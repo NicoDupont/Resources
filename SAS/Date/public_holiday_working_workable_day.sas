@@ -1,6 +1,6 @@
 /*------------------------------------*/
 /* Creation date : 14/04/2017  (fr)   */
-/* Last update :   14/04/2017  (fr)   */
+/* Last update :   15/04/2017  (fr)   */
 /* Author(s) : Nicolas DUPONT         */
 /* Contributor(s) : 		          */
 /* Tested on SAS Unix 9.3.0.0         */
@@ -389,7 +389,6 @@ run;
 
 data test;
 	set test;
-	format NbWkingDayMonth DATE9.;
 	NbWkingDayMonth=NumberWorkingDayMonth(date);
 run;
 
@@ -410,7 +409,6 @@ run;
 
 data test;
 	set test;
-	format NbWkableDayMonth DATE9.;
 	NbWkableDayMonth=NumberWorkableDayMonth(date);
 run;
 
@@ -418,6 +416,36 @@ run;
 /*  15 - NumberWorkingDay()      	   */
 /*-------------------------------------*/
 
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function NumberWorkingDay(DateDay);
+
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	NbWkingDay=NumberWorkingDay(date);
+run;
+
 /*-------------------------------------*/
 /*  16 - NumberWorkableDay()           */
 /*-------------------------------------*/
+
+/* Need to be tested.. */
+
+proc fcmp outlib=work.cat_function.test;
+	function NumberWorkableDay(DateDay);
+
+		return(res);
+	endsub;
+run;
+
+
+data test;
+	set test;
+	NbWkableDay=NumberWorkableDay(date);
+run;

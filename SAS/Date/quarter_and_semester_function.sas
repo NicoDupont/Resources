@@ -1,6 +1,6 @@
 /*------------------------------------*/
 /* Creation date : 09/04/2017  (fr)   */
-/* Last update :   09/04/2017  (fr)   */
+/* Last update :   15/04/2017  (fr)   */
 /* Author(s) : Nicolas DUPONT         */
 /* Contributor(s) : 		          */
 /* Tested on SAS Studio 9.4           */
@@ -47,6 +47,7 @@ proc fcmp outlib=work.cat_function.test ;
 		/* There is no test if DateDay is a real date.. */
 		Lg=Language;
 		qd=QTR(DateDay);
+		length q $ 2;
 		if Lg='EN' then do;
 			select (qd);
 				when (1) q='Q1';
@@ -88,6 +89,7 @@ proc fcmp outlib=work.cat_function.test ;
 		Lg=Language;
 		qd=QTR(DateDay);
 		ye=put(year(DateDay),4.);
+		length q $ 7;
 		if Lg='EN' then do;
 			select (qd);
 				when (1) q=compress('Q1-'||ye);
@@ -127,6 +129,7 @@ proc fcmp outlib=work.cat_function.test ;
 	function Semester(DateDay) $ ;
 		/* There is no test if DateDay is a real date.. */
 		qd=QTR(DateDay);
+		length q $ 2;
 		if qd in (1,2) then se=1; else se=2;
 		select (se);
 			when (1) s='S1';
@@ -153,6 +156,7 @@ proc fcmp outlib=work.cat_function.test ;
 		/* There is no test if DateDay is a real date.. */
 		qd=QTR(DateDay);
 		ye=put(year(DateDay),4.);
+		length q $ 7;
 		if qd in (1,2) then se=1; else se=2;
 		select (se);
 			when (1) s=compress('S1-'||ye);
