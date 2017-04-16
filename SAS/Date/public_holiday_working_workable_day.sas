@@ -1,9 +1,9 @@
 /*------------------------------------*/
 /* Creation date : 14/04/2017  (fr)   */
-/* Last update :   15/04/2017  (fr)   */
+/* Last update :   16/04/2017  (fr)   */
 /* Author(s) : Nicolas DUPONT         */
-/* Contributor(s) : 		          */
-/* Tested on SAS Unix 9.3.0.0         */
+/* Contributor(s) : 		              */
+/* Tested on SAS Studio 9.4           */
 /*------------------------------------*/
 
 /*------------------------------------*/
@@ -27,6 +27,8 @@
 ' - 16 - NumberWorkableDay() ------ returns the number of workable days between two dates.
 */
 /*------------------------------------*/
+
+options cmplib=work.cat_function;
 
 /* Example data : */
 data test;
@@ -283,7 +285,7 @@ run;
 /*  9 - FirstWorkingDayMonth()    	   */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
 	function FirstWorkingDayMonth(DateDay);
@@ -304,7 +306,7 @@ run;
 /*  10 - FirstWorkableDayMonth()       */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
 	function FirstWorkableDayMonth(DateDay);
@@ -325,7 +327,7 @@ run;
 /*  11 - LastWorkingDayMonth()    	   */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
 	function LastWorkingDayMonth(DateDay);
@@ -351,7 +353,7 @@ run;
 /*  12 - LastWorkableDayMonth()        */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
 	function LastWorkableDayMonth(DateDay);
@@ -377,11 +379,17 @@ run;
 /*  13 - NumberWorkingDayMonth()       */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
 	function NumberWorkingDayMonth(DateDay);
-
+		fd = BeginMonth(DateDay);
+		ld = EndMonth(DateDay);
+		res = 0;
+		do i=fd to ld;
+			if WorkingDay(i) = 1
+				then res ++ 1;
+		end;
 		return(res);
 	endsub;
 run;
@@ -397,11 +405,17 @@ run;
 /*  14 - NumberWorkableDayMonth()      */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
 	function NumberWorkableDayMonth(DateDay);
-
+		fd = BeginMonth(DateDay);
+		ld = EndMonth(DateDay);
+		res = 0;
+		do i=fd to ld;
+			if WorkableDay(i) = 1
+				then res ++ 1;
+		end;
 		return(res);
 	endsub;
 run;
@@ -416,11 +430,15 @@ run;
 /*  15 - NumberWorkingDay()      	   */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
-	function NumberWorkingDay(DateDay);
-
+	function NumberWorkingDay(DateFirst,DateLast);
+		res = 0;
+		do i=DateFirst to DateLast;
+			if WorkingDay(i) = 1
+				then res ++ 1;
+		end;
 		return(res);
 	endsub;
 run;
@@ -428,18 +446,22 @@ run;
 
 data test;
 	set test;
-	NbWkingDay=NumberWorkingDay(date);
+	NbWkingDay=NumberWorkingDay(date,date2);
 run;
 
 /*-------------------------------------*/
 /*  16 - NumberWorkableDay()           */
 /*-------------------------------------*/
 
-/* Need to be tested.. */
+/* Need to be verified.. */
 
 proc fcmp outlib=work.cat_function.test;
-	function NumberWorkableDay(DateDay);
-
+	function NumberWorkableDay(DateFirst,DateLast);
+		res = 0;
+		do i=DateFirst to DateLast;
+			if WorkableDay(i) = 1
+				then res ++ 1;
+		end;
 		return(res);
 	endsub;
 run;
@@ -447,5 +469,5 @@ run;
 
 data test;
 	set test;
-	NbWkableDay=NumberWorkableDay(date);
+	NbWkableDay=NumberWorkableDay(date,date2);
 run;

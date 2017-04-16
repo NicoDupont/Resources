@@ -38,3 +38,4 @@ In the data folder, some datasets are available.
 - First and last day of the month [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/first_and_last_day_of_the_month.sas)
 - Functions about public holiday, working day, workable day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/public_holiday_working_workable_day.sas)
 - Convert a sas date to a numerique value or a numerique value representing a date to a sas date [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/num_to_date_or_date_to_num.sas)
+- Add or Substract month / year to a date at the same day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/add_month_year.sas)
