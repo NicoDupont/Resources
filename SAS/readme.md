@@ -40,3 +40,8 @@ In the data folder, some datasets are available.
 - Convert a sas date to a numerique value or a numerique value representing a date to a sas date [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/num_to_date_or_date_to_num.sas)
 - Add or Substract month / year to a date at the same day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/add_month_year.sas)
 - Compute the age [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/compute_age.sas)
+
+
+**Math :**
+
+- Decimal part [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/decimal_part.sas)
