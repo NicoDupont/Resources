@@ -8,6 +8,10 @@ An example is provided if possible.
 #### Various :
 
 - Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
+- Check email [link]()
+- Returns the number of the sheet by its name [link]()
+- Remove sheet protection [link]()
+- Remove workbook protection [link]()
 
 #### Date :
 
@@ -20,6 +24,14 @@ An example is provided if possible.
 - Functions about public holiday, working day, workable day [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/public_holiday_working_workable_day.bas)
 - Convert a date to a numerical value or a numerical value representing a date to a date [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/num_to_date_or_date_to_num.bas)
 - Compute the age [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Date/compute_age.bas)
+
+#### Math :
+
+- Decimal part [link]()
+- Even or Odd [link]()
+- Divisible by [link]()
+- Division [link]()
+- Factorial [link]()
 
 
 
