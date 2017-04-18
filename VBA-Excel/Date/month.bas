@@ -127,3 +127,80 @@ Function MonthYear(Optional DateDay As Date, Optional Language As String) As Str
     End Select
     
 End Function
+
+
+                
+'-------------------------------------------------
+' It's the same function as MonthText() function but with the concatenated year minimized
+'-------------------------------------------------
+
+Function MonthYearMini(Optional DateDay As Date, Optional Language As String) As String
+    
+    ' Test on Language parameter
+    If Language = "" Then Language = "EN"
+    Dim ArrayLang(12) As String
+    If UCase(Language) = "FR" Then
+        ArrayLang(0) = "jan"
+        ArrayLang(1) = "fév"
+        ArrayLang(2) = "mar"
+        ArrayLang(3) = "avr"
+        ArrayLang(4) = "mai"
+        ArrayLang(5) = "juin"
+        ArrayLang(6) = "juil"
+        ArrayLang(7) = "aout"
+        ArrayLang(8) = "sept"
+        ArrayLang(9) = "oct"
+        ArrayLang(10) = "nov"
+        ArrayLang(11) = "déc"
+    Else
+        ArrayLang(0) = "jan"
+        ArrayLang(1) = "feb"
+        ArrayLang(2) = "mar"
+        ArrayLang(3) = "apr"
+        ArrayLang(4) = "may"
+        ArrayLang(5) = "jun"
+        ArrayLang(6) = "jul"
+        ArrayLang(7) = "aug"
+        ArrayLang(8) = "sept"
+        ArrayLang(9) = "oct"
+        ArrayLang(10) = "nov"
+        ArrayLang(11) = "dec"
+    End If
+    
+    ' Test on DateDay parameter
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim ye As String
+    ye = year(DateDay)
+    ye = Right(ye, 2)
+    Select Case month(DateDay)
+        Case Is = "1": MonthYearMini = ArrayLang(0) & "-" & ye
+        Case Is = "2": MonthYearMini = ArrayLang(1) & "-" & ye
+        Case Is = "3": MonthYearMini = ArrayLang(2) & "-" & ye
+        Case Is = "4": MonthYearMini = ArrayLang(3) & "-" & ye
+        Case Is = "5": MonthYearMini = ArrayLang(4) & "-" & ye
+        Case Is = "6": MonthYearMini = ArrayLang(5) & "-" & ye
+        Case Is = "7": MonthYearMini = ArrayLang(6) & "-" & ye
+        Case Is = "8": MonthYearMini = ArrayLang(7) & "-" & ye
+        Case Is = "9": MonthYearMini = ArrayLang(8) & "-" & ye
+        Case Is = "10": MonthYearMini = ArrayLang(9) & "-" & ye
+        Case Is = "11": MonthYearMini = ArrayLang(10) & "-" & ye
+        Case Is = "12": MonthYearMini = ArrayLang(11) & "-" & ye
+    End Select
+    
+End Function
+
+
+'-------------------------------------------------
+' The function MonthYearNum() returns the month and the year in numerique value like AAAAMM (201704 for April-2017)
+'-------------------------------------------------
+
+Function MonthYearNum(Optional DateDay As Date) As Double
+    
+    If DateDay = "00:00:00" Then DateDay = Date
+    Dim ye As Double
+    Dim mo As Double
+    ye = CInt(year(DateDay))
+    mo = CInt(month(DateDay))
+    MonthYearNum = (ye * 100) + mo
+
+End Function
