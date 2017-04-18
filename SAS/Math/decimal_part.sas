@@ -31,8 +31,9 @@ proc fcmp outlib=work.cat_function.test ;
 	function DecimalPart(decnum);
 	    res=mod(decnum,1);
 	    /*res=decnum-int(decnum);*/
-	    /*res = int(10*mod(decnum,1))/10;*/
-		return(res);
+	    /*res = int(100*mod(decnum,1))/100;*/
+	    /*res = int(100*mod(decnum,1));*/
+	    return(res);
 	endsub;
 run;
 
