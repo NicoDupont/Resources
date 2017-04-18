@@ -1,24 +1,25 @@
 /*------------------------------------*/
 /* Creation date : 17/04/2017  (fr)   */
-/* Last update :   17/04/2017  (fr)   */
+/* Last update :   18/04/2017  (fr)   */
 /* Author(s) : Nicolas DUPONT         */
-/* Contributor(s) : 		              */
-/* need to be tested                  */
+/* Contributor(s) : 		      */
+/* Tested on SAS 9.3                  */
 /*------------------------------------*/
 
 
 /* Example data : */
 data test;
 	input nb;
-	informat nb ;
+	informat nb 6.2;
+	format nb 6.2;
 	datalines;
-		16APR1986
-		15APR1986
-		17APR1986
-		29FEB2016
-		29FEB2016
-		29FEB2016
-		;
+	5.56
+   10.20
+   12.00
+  156.00
+   45.69
+  124.10
+;
 run;
 
 
@@ -28,11 +29,10 @@ run;
 
 proc fcmp outlib=work.cat_function.test ;
 	function DecimalPart(decnum);
-    /*obtenir la partie non entière*/
-    /*Y=mod(decnum,1);
-    Z=X-int(decnum);*/
-    res = int(10*mod(decnum,1))/10;
-	 return(res);
+	    res=mod(decnum,1);
+	    /*res=decnum-int(decnum);*/
+	    /*res = int(10*mod(decnum,1))/10;*/
+		return(res);
 	endsub;
 run;
 
@@ -42,5 +42,6 @@ options cmplib=work.cat_function;
 /* Example : */
 data test;
 	set test;
+	format decnb 4.2;
 	decnb = DecimalPart(nb);
 run;
