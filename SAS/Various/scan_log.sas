@@ -48,4 +48,4 @@
 %mend ScanLog;
 
 
-%ScanLog(PathToYourLog.xxx);
+%ScanLog(PathToYourLog);
