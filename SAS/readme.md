@@ -14,6 +14,7 @@ In the data folder, some datasets are available.
 - Array in Datastep [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/an_array_in_a_datastep.sas)
 - List of files in a directory [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/list_of_files_in_a_directory.sas)
 - Check email function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/check_email_function.sas)
+- Scan sas log file to find ERROR or WARNING [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/scan_log.sas)
 
 
 
