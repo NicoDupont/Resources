@@ -9,7 +9,7 @@ An example is provided if possible.
 
 - Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
 - Check email [link]()
-- Returns the number of the sheet by its name [link]()
+- Returns the number(index) of the sheet with its name or the name with its number(index) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sheet_index_name.bas)
 - Remove sheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
 - Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
 
