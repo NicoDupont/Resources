@@ -10,8 +10,8 @@ An example is provided if possible.
 - Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
 - Check email [link]()
 - Returns the number of the sheet by its name [link]()
-- Remove sheet protection [link]()
-- Remove workbook protection [link]()
+- Remove sheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
+- Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
 
 #### Date :
 
