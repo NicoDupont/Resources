@@ -9,7 +9,7 @@
 Option Explicit
 
 ' --------------------------------------------------------------------------------
-' The function SheetName() returns the name of the sheet relative to its number
+' The function SheetName() returns the name of the sheet relative to its number (index)
 ' --------------------------------------------------------------------------------
 
 Function SheetName(Optional Number As Byte) As String
@@ -26,7 +26,7 @@ End Function
 
 
 ' --------------------------------------------------------------------------------
-' The function SheetNumber() returns the number of the sheet relative to its name
+' The function SheetNumber() returns the number (index) of the sheet relative to its name
 ' --------------------------------------------------------------------------------
 
 Function SheetNumber(Optional Name As String) As Byte
