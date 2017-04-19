@@ -27,11 +27,11 @@ An example is provided if possible.
 
 #### Math :
 
-- Decimal part [link]()
-- Even or Odd [link]()
-- Divisible by [link]()
-- Division [link]()
-- Factorial [link]()
+- Decimal part [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/decimal_part.bas)
+- Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_even_or_odd.bas)
+- Divisible by [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_divisible.bas)
+- Division [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/division.bas)
+- Factorial [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/factorial.bas)
 
 
 
