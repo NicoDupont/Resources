@@ -33,6 +33,7 @@ proc fcmp outlib=work.cat_function.test ;
 	    /*res=decnum-int(decnum);*/
 	    /*res = int(100*mod(decnum,1))/100;*/
 	    /*res = int(100*mod(decnum,1));*/
+	    /*res = decnum - (1 * int(decnum / 1))*/
 	    return(res);
 	endsub;
 run;
