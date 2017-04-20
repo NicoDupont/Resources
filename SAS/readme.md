@@ -46,3 +46,7 @@ In the data folder, some datasets are available.
 **Math :**
 
 - Decimal part [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/decimal_part.sas)
+- Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/is_even_or_odd.sas)
+- Divisible By [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/is_divisible_by.sas)
+- Division [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/division.sas)
+- Factorial [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/factorial.sas)
