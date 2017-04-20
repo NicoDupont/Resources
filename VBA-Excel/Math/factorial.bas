@@ -16,7 +16,7 @@ Function Factorial(Number As Double) As Double
     
     Dim res As Double
     res = 0
-    If Number = 0 Then
+    If Number = 0 or Number = 1 Then
         res = 1
         Else
         res = Factorial(Number - 1) * Number
