@@ -8,7 +8,12 @@ An example is provided if possible.
 #### Various :
 
 - Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
-- Check email [link]()
+- Update TCD [link]() in progress..
+- Update Data in a sheet [link]() in progress..
+- Check if a directory exist or not and if not create it [link]() in progress..
+- Send an email [link]() in progress..
+- Check email adress [link]() in progress..
+- Add a sheet to a workbook [link]() in progress..
 - Returns the number(index) of the sheet with its name or the name with its number(index) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sheet_index_name.bas)
 - Remove sheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
 - Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
@@ -32,10 +37,3 @@ An example is provided if possible.
 - Divisible by [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_divisible.bas)
 - Division [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/division.bas)
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/factorial.bas)
-
-
-
-
-
-
-
