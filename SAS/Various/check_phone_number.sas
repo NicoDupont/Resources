@@ -9,6 +9,7 @@
 /*
 A sas macro to compute if a FR phone number is valid or not.
 It can be improved with better regex and better data in entry.
+Some patterns are not tested..
 */
 
 /* Data for testing : */
