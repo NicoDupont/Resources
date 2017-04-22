@@ -5,7 +5,7 @@ Most of the time or when it's possible, a dataset or an example is available to 
 Do not hesitate to send me an email/message if you see a mistake, to add some improvements or for any question !!    
 
  - [SAS](https://github.com/NicoDupont/Resources/tree/master/SAS)  (9.X)
- - Python (3.X)
+ - [Python](https://github.com/NicoDupont/Resources/tree/master/Python) (3.X)
  - R
  - SQL
  - [VBA-Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010>)
