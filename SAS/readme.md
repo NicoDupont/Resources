@@ -31,7 +31,7 @@ In the data folder, some datasets are available.
 - Copy a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/copy_dataset.sas)
 - Rename a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_dataset.sas)
 - Delete sas files in a library [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/delete_sas_files_library.sas)
-
+- Change length of a variable in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/change_length_dataset.sas)
 
 
 **Date :**
