@@ -5,6 +5,9 @@
 For each resource, you have a .py file.  
 In the data folder, some datasets are available.  
 
+**Date :**
+
+- Quarter and Semester [link](https://github.com/NicoDupont/Resources/blob/master/Python/Date/quarter_and_semester.py)
 
 **Math :**  
 
@@ -15,4 +18,6 @@ In the data folder, some datasets are available.
 
 **Stats :**
 
+- Mean with or without numpy [link](https://github.com/NicoDupont/Resources/blob/master/Python/Stats/mean.py)
+- Variance et Covariance [link](https://github.com/NicoDupont/Resources/blob/master/Python/Stats/variance_covariance.py)
 - Compute the Pearson correlation coefficient between 2 variables [link](https://github.com/NicoDupont/Resources/blob/master/Python/Stats/pearson_coeff.py)
