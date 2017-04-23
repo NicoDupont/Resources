@@ -28,7 +28,7 @@ def Factorial(nb):
     return res
 """
 
-# Thirs way :
+# Third way :
 # fact = lambda z : reduce(lambda x,y:x*y,range(1,z+1),1)
 
 a = 1
