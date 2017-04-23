@@ -28,6 +28,7 @@ In the data folder, some datasets are available.
 - Export a dataset to a delimited flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_text_file.sas)
 - Export a dataset to a structured flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_structured_flat_file.sas)
 - Put a prefix on variables/columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/prefix_on_variable.sas)
+- Rename variables with prefix [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_variables_with_prerfix.sas)
 - Append two or more datasets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/append_dataset.sas)
 - Copy a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/copy_dataset.sas)
 - Rename a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_dataset.sas)
@@ -46,6 +47,7 @@ In the data folder, some datasets are available.
 - Convert a sas date to a numerique value or a numerique value representing a date to a sas date [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/num_to_date_or_date_to_num.sas)
 - Add or Substract month / year to a date at the same day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/add_month_year.sas)
 - Compute the age [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/compute_age.sas)
+- Date Excel vs SAS [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/excel_vs_sas.md)
 
 
 **Math :**
