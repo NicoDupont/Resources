@@ -7,7 +7,7 @@ In the data folder, some datasets are available.
 
 **Date :**
 
-- Quarter and Semester [link](https://github.com/NicoDupont/Resources/blob/master/Python/Date/quarter_and_semester.py)
+- Quarter and Semester (in progress..) [link](https://github.com/NicoDupont/Resources/blob/master/Python/Date/quarter_and_semester.py)
 
 **Math :**  
 
@@ -15,6 +15,7 @@ In the data folder, some datasets are available.
 - Divisble By [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/is_divisible_by.py)
 - Decimal part [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/decimal_part.py)
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/factorial.py)
+- Division [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/division.py)
 
 **Stats :**
 
