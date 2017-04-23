@@ -10,6 +10,8 @@ In the data folder, some datasets are available.
 
 - Is Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/is_even_or_odd.py)
 - Divisble By [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/is_divisible_by.py)
+- Decimal part [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/decimal_part.py)
+- Factorial [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/factorial.py)
 
 **Stats :**
 
