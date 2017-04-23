@@ -28,7 +28,7 @@ In the data folder, some datasets are available.
 - Export a dataset to a delimited flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_text_file.sas)
 - Export a dataset to a structured flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/export_dataset_to_a_structured_flat_file.sas)
 - Put a prefix on variables/columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/prefix_on_variable.sas)
-- Rename variables with prefix [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_variables_with_prerfix.sas)
+- Rename variables with prefix [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_variables_with_prefix.sas)
 - Append two or more datasets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/append_dataset.sas)
 - Copy a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/copy_dataset.sas)
 - Rename a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_dataset.sas)
