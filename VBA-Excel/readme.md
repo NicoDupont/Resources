@@ -12,7 +12,7 @@ An example is provided if possible.
 - Iterate over all Pivot tables in a sheet [link]() in progress..
 - Change data source in a Pivot Table [link]() in progress..
 - Modify filters in a Pivot table [link]() in progress..
-- Update Data in a sheet [link]() in progress..
+- Update Data source in a sheet [link]() in progress..
 - Check if a directory exist or not and if not create it [link]() in progress..
 - Send an email [link]() in progress..
 - Check email adress [link]() in progress..
