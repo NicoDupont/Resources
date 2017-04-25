@@ -1,4 +1,9 @@
-![](https://img.shields.io/badge/SAS-9.3-B34936.svg) ![](https://img.shields.io/badge/SAS-9.4-B34936.svg) ![](https://img.shields.io/badge/VBA-Excel--2010-945DB7.svg) ![](https://img.shields.io/badge/VBA-Excel--2013-945DB7.svg) ![](https://img.shields.io/badge/Python-3.6-3572A5.svg)
+![](https://img.shields.io/badge/SAS-9.3-B34936.svg) 
+![](https://img.shields.io/badge/SAS-9.4-B34936.svg) 
+![](https://img.shields.io/badge/VBA-Excel--2010-945DB7.svg) 
+![](https://img.shields.io/badge/VBA-Excel--2013-945DB7.svg) 
+![](https://img.shields.io/badge/Python-3.6-3572A5.svg) 
+![](https://img.shields.io/badge/R-3.4-198CE7.svg)
 
 ## Resources
 
