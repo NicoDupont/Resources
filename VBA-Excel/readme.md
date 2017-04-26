@@ -40,3 +40,4 @@ An example is provided if possible.
 - Divisible by [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_divisible.bas)
 - Division [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/division.bas)
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/factorial.bas)
+- Prime number [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_prime.bas)
