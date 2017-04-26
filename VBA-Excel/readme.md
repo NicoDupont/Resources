@@ -8,15 +8,16 @@ An example is provided if possible.
 #### Various :
 
 - Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
-- Update Pivot table [link]() in progress..
-- Iterate over all Pivot tables in a sheet [link]() in progress..
-- Change data source in a Pivot Table [link]() in progress..
-- Modify filters in a Pivot table [link]() in progress..
-- Update Data source in a sheet [link]() in progress..
-- Check if a directory exist or not and if not create it [link]() in progress..
-- Send an email [link]() in progress..
-- Check email adress [link]() in progress..
-- Add a sheet to a workbook [link]() in progress..
+- Update Pivot table [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/update_pivot.bas)
+- Iterate over all Pivot tables in a sheet [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/iterate_over_pivot.bas)
+- Change data source in a Pivot Table [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/change_data_source.bas)
+- Modify filters in a Pivot table [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/modify_filter_pivot.bas)
+- Update Data source in a worksheet [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/update_data.bas)
+- Check if a directory exist or not and if not create it [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_directory.bas)
+- Check if a file exist or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_file.bas)
+- Send an email [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/send_email.bas)
+- Check email adress [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_email.bas)
+- Add a worksheet to a workbook [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/add_wroksheet.bas)
 - Returns the number(index) of the sheet with its name or the name with its number(index) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sheet_index_name.bas)
 - Remove sheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
 - Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
