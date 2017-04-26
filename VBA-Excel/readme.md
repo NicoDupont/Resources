@@ -41,3 +41,4 @@ An example is provided if possible.
 - Division [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/division.bas)
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/factorial.bas)
 - Prime number [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_prime.bas)
+- Area, Perimeter, volume [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/geometry.bas)
