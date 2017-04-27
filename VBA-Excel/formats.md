@@ -2,7 +2,7 @@
 
 - Numeric format :
 
-| Format           |     Raw Value     |   Result              |
+| Format (FR)           |     Raw Value     |   Result              |
 | :- |:-: | :-: |
 | + 0,00%;- 0,00%  |   0,1545 / - 0,1545 |   - 15.45%  /  + 15.45% |
 |  # ##0,00 " K€"   | 155600 / -15600  | 155.60 K€  /  -15.60 K€  |
