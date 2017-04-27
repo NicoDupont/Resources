@@ -19,6 +19,7 @@ An example is provided if possible.
 - Check email adress [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_email.bas)
 - Add a worksheet to a workbook [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/add_wroksheet.bas)
 - Returns the number(index) of the sheet with its name or the name with its number(index) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sheet_index_name.bas)
+- Test if a worksheet exist or not in a workbook [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/worksheet_exist.bas)
 - Remove sheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
 - Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
 
