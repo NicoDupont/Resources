@@ -22,6 +22,7 @@ An example is provided if possible.
 - Test if a worksheet exist or not in a workbook [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/worksheet_exist.bas)
 - Remove sheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
 - Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
+- Test if a workbook is open or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/workbook_is_open.bas)
 
 #### Date :
 
