@@ -13,7 +13,7 @@ def Division(num,dem):
     if num in ('NaN',0) or dem in ('NaN',0):
         res = float('nan')  # or 0 ?
     else:
-        res = num/dem
+        res = num/float(dem)
     return res
 
 
