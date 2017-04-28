@@ -17,6 +17,7 @@ In the data folder, some datasets are available.
 - Check phone number (Fr) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/check_phone_number.sas)
 - Scan sas log file to find ERROR or WARNING [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/scan_log.sas)
 - Use Put or Input ? [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/put_or_input.md)
+- Putn and Inputn [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/putn_and_inputn.md)
 
 
 
