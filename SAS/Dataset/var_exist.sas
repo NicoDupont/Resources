@@ -1,6 +1,6 @@
 /*------------------------------------*/
 /* Creation date : 06/04/2017  (fr)   */
-/* Last update :   06/04/2017  (fr)   */
+/* Last update :   28/04/2017  (fr)   */
 /* Author(s) : Nicolas DUPONT         */
 /* Contributor(s) : 		          */
 /* Tested on SAS 9.3                  */
@@ -55,4 +55,43 @@ Log result :
 --------------------------
 var1 column don't exist on the dataset : WORK.CARS
 --------------------------
+*/
+
+
+
+/* various version :*/
+
+%GLOBAL res;
+%macro VarExist(table, var) /*/store*/;
+
+	%local rc dsid;
+	%let dsid=%sysfunc(open(&table));
+	%if %sysfunc(varnum(&dsid, &var)) > 0 %then %do;
+		%let res=1;
+	%end;
+	%else %do;
+		%let res=0;
+	%end;
+	%let rc=%sysfunc(close(&dsid));
+	%put &res;
+	
+%mend VarExist;
+%VarExist(SASHELP.CARS,Make);
+%VarExist(SASHELP.CARS,var1);
+
+
+/*
+Log result :
+
+ok :
+	%VarExist(SASHELP.CARS,Make);
+	--------------------------
+	Make column exist on the dataset : SASHELP.CARS
+	--------------------------
+
+ko :
+	%VarExist(SASHELP.CARS,var1);
+	--------------------------
+	var1 column do not exist on the dataset : SASHELP.CARS
+	--------------------------
 */
