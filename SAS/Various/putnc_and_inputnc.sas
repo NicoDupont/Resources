@@ -136,3 +136,33 @@ num-value=INPUTN(char-string,num-informat);
 10:50:21
 
 */
+
+/* Example with a num format : */
+proc format ;
+	value income
+	0 -< 1000 ='small'
+	1000 - high ='big';
+run;
+
+/* equivalent :
+proc format ;
+	value income
+	low -< 1000 ='small'
+	1000 - high ='big';
+run;
+*/
+
+%let salary = 1234;
+%put --------------------; 
+%put %sysfunc(putn(&salary,income.));
+
+
+/* Results :
+
+%let salaire = 1234;
+%put --------------------;
+--------------------
+%put %sysfunc(putn(&salaire,income.));
+big
+
+*/
