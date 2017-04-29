@@ -2,7 +2,7 @@
 ![](https://www.python.org/static/img/python-logo.png)
 ---
 
-For each resource, you have a .py file.  
+For each resource, you have a .py or .md file.  
 In the data folder, some datasets are available.  
 
 **Date :**

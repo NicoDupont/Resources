@@ -2,7 +2,7 @@
 ![](https://support.sas.com/images/SAS_TPTK_logo.gif)
 ---
 
-For each resource, you have a sas file.  
+For each resource, you have a .sas or a .md file.  
 In the data folder, some datasets are available.  
 
 **Various :**  
