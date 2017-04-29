@@ -9,7 +9,7 @@
 /* An example on how to export a dataset to a structured flat file (not delimited) */
 
 data work.test;
-	length id 3. name $10. code $2. lib $13. date 8.;
+	length id 3. name $10. code $2. lib $13. date 8.; 
 	format id 3. name $10. code $2. lib $13. date ddmmyy10.;
 	informat date DATE9.;
 	input id name $ code $ lib $ date;
@@ -27,8 +27,8 @@ data _NULL_;
 set work.test;
 file "Path/test.txt" /*dlm="something-here" there are others options */;
 if _N_ >= 1 then do;
-	put @1 id 3.
-		@5 name $10.
+	put @1 id 3. 
+		@5 name $10. 
 		@16 code $2.
 		@19 lib $13.
 		@33 date ddmmyy10.;
