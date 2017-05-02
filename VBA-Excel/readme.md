@@ -2,8 +2,8 @@
 ### VBA - Excel
 ---
 
-For each resource, you have a .bas(vb) file.  
-An example is provided if possible.
+For each resource, you have a .bas(vb) or a .md file.  
+An example is provided if possible. => xlsx or xlsm file  
 
 #### Various :
 
