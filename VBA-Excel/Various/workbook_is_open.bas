@@ -1,6 +1,6 @@
 '--------------------------------------
 ' Creation date : 27/04/2017  (fr)
-' Last update :   27/04/2017  (fr)
+' Last update :   02/05/2017  (fr)
 ' Author(s) : Nicolas DUPONT
 ' Contributor(s) :
 ' Tested on Excel 2010
@@ -24,5 +24,6 @@ Function WbIsOpen(Wb As String) As Boolean
     Else
         WbIsOpen = True
     End If
+    Set IsOpen = Nothing
     
 End Function
