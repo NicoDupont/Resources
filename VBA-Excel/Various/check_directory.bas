@@ -1,6 +1,6 @@
 '--------------------------------------
 ' Creation date : 27/04/2017  (fr)
-' Last update :   27/04/2017  (fr)
+' Last update :   02/05/2017  (fr)
 ' Author(s) : Nicolas DUPONT
 ' Contributor(s) :
 ' Tested on Excel 2010
@@ -55,5 +55,7 @@ Function DirectoryExistFso(Path As String) As Boolean
     Else
         DirectoryExistFso = True
     End If
+       
+    Set ObjFso = Nothing
 
 End Function
