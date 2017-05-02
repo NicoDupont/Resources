@@ -24,6 +24,7 @@ An example is provided if possible.
 - Remove workbook protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_workbook_protection.bas)
 - Test if a workbook is open or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/workbook_is_open.bas)
 - Open a workbook (test if folder and file exist) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/open_workbook.bas)
+- Make SQL in VBA Excel [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sql_example.bas)
 
 #### Date :
 
