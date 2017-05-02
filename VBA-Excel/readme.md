@@ -17,7 +17,7 @@ An example is provided if possible. => xlsx or xlsm file
 - Check if a file exist or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_file.bas)
 - Send an email [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/send_email.bas)
 - Check email adress [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_email.bas)
-- Add or dell a worksheet [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/add_or_del_worksheet.bas)
+- Add or del a worksheet [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/add_or_del_worksheet.bas)
 - Protect / Unprotect a worksheet [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/protect_worksheet.bas)
 - Hide, Very Hidden, Visible (worksheet) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/hide_visible_worksheet.bas)
 - Returns the number(index) of the sheet with its name or the name with its number(index) [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sheet_index_name.bas)
