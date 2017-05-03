@@ -68,3 +68,4 @@ In the data folder, some datasets are available.
 - Is Prime [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/is_prime.sas)
 - Convert miles <=> kilometers [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/convert_miles_kilometers.sas)
 - Convert ° Celcius <=> ° Fahrenheit [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/convert_celcius_fahrenheit.sas)
+- Geometry [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/geometry.sas)
