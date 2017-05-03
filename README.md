@@ -9,7 +9,7 @@
 
 These resources are usefull codes that I have written myself or retrieved on the internet and adapted.      
 Most of the time or when it's possible, a dataset or an example is available to test by yourself.  
-Remember there is no support. You need to adapt the code to your problem.
+Remember there is no support. You need to adapt the code to your problem.  
 But do not hesitate to send me an email/message if you see a mistake, to add some improvements or for any question !  
 I try to implement my code on each langage that I can use.   
 This why you can see same functions/parts on SAS, Python, etc..  
