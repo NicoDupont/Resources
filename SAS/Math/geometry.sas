@@ -1,8 +1,8 @@
 /*------------------------------------*/
 /* Creation date : 03/05/2017  (fr)   */
 /* Last update :   03/05/2017  (fr)   */
-/* Author(s) : Nicolas DUPONT         */
-/* Contributor(s) : 		          */
+/* Author(s) : Nicolas Dupont         */
+/* Contributor(s) : 		      */
 /* Tested on SAS 9.3 (Unix)           */
 /*------------------------------------*/
 
