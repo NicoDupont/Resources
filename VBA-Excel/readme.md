@@ -30,14 +30,15 @@ An example is provided if possible. => xlsx or xlsm file
   - Change data source in a Pivot Table [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/change_data_source.bas)
   - Modify filters in a Pivot table [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/modify_filter_pivot.bas)
 
-- Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
-- Check if a directory exist or not and if not create it [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_directory.bas)
-- Check if a file exist or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_file.bas)
-- Send an email [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/send_email.bas)
-- Check email adress [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_email.bas)
-- Make SQL in VBA Excel [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sql_example.bas)
-- Generate a pdf [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/make_pdf.bas)
-- Generate a powerpoint [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/make_powerpoint.bas)
+- Miscellaneous :
+  - Create a JSON file from a Range [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/create_a_json_file.bas)
+  - Check if a directory exist or not and if not create it [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_directory.bas)
+  - Check if a file exist or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_file.bas)
+  - Send an email [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/send_email.bas)
+  - Check email adress [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/check_email.bas)
+  - Make SQL in VBA Excel [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/sql_example.bas)
+  - Generate a pdf [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/make_pdf.bas)
+  - Generate a powerpoint [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/make_powerpoint.bas)
 
 #### Date :
 
