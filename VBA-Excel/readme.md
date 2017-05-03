@@ -16,6 +16,7 @@ An example is provided if possible. => xlsx or xlsm file
   - Test if a worksheet exist or not [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/worksheet_exist.bas)
   - Remove worksheet protection [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/remove_sheet_protection.bas)
   - Update Data source in a worksheet [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/update_data.bas)
+  - Move a worksheet in a workbook [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Various/move_worksheet.bas)
 
 - Workbook :
 
