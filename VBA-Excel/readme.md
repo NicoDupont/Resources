@@ -1,5 +1,5 @@
 
-### VBA - Excel
+### VBA - Excel  (Windows)
 ---
 
 For each resource, you have a .bas(vb) or a .md file.  
