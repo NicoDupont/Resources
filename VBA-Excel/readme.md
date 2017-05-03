@@ -62,3 +62,5 @@ An example is provided if possible. => xlsx or xlsm file
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/factorial.bas)
 - Prime number [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/is_prime.bas)
 - Area, Perimeter, volume [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/geometry.bas)
+- Convert Miles <=> Kilometers [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/convert_miles_kilometers.bas)
+- Convert Celcius <=> Fahrenheit [link](https://github.com/NicoDupont/Resources/blob/master/VBA-Excel/Math/convert_celcius_fahrenheit.bas)
