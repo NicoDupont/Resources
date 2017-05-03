@@ -65,3 +65,6 @@ In the data folder, some datasets are available.
 - Divisible By [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/is_divisible_by.sas)
 - Division [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/division.sas)
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/factorial.sas)
+- Is Prime [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/is_prime.sas)
+- Convert miles <=> kilometers [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/convert_miles_kilometers.sas)
+- Convert ° Celcius <=> ° Fahrenheit [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/convert_celcius_fahrenheit.sas)
