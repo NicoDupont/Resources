@@ -2,8 +2,8 @@
 /* Creation date : 03/05/2017  (fr)   */
 /* Last update :   04/05/2017  (fr)   */
 /* Author(s) : Nicolas Dupont         */
-/* Contributor(s) : 		          */
-/* Tested on SAS 9.3 (Unix)           */
+/* Contributor(s) : 		      */
+/* Tested on SAS Studio 9.4           */
 /*------------------------------------*/
 
 /*
@@ -13,9 +13,20 @@
 4  - CirclePerimeter() -------- returns the perimeter of a cube or a rectangle
 5  - CircleArea() ------------- returns the area of a cube or a rectangle
 6  - VolumeSphere() ----------- returns the volume of a sphere
-8  - IsRightTriangle() -------- returns 1 if the triangle is right
-9  - IsIsoscelesTriangle() ---- returns 1 if the triangle is isosceles
-10 - IsEquilateralTriangle() -- returns 1 if the triangle is equilateral
+7  - IsRightTriangle() -------- returns 1 if the triangle is right
+8  - IsIsoscelesTriangle() ---- returns 1 if the triangle is isosceles
+9  - IsEquilateralTriangle() -- returns 1 if the triangle is equilateral
+10 - TriangleArea() ----------- returns the area of a triangle
+*/
+
+
+dm log 'clear';
+dm lst 'clear';
+/*dm log 'preview';*/
+
+/*
+proc datasets library=work mt=data kill nolist;
+quit;
 */
 
 /* Example data : */
@@ -37,6 +48,7 @@ data test;
 1 2 3
 2 3 4
 3 4 5
+5 4 3
 1 2 5
 1 1 2
 6 8 10
@@ -122,7 +134,7 @@ run;
 /*------------------------------------------------------------------------------*/
 
 /*-----------------------*/
-/* 8 - IsRightTriangle() */
+/* 7 - IsRightTriangle() */
 /*-----------------------*/
 
 proc fcmp outlib=work.cat_function.test ;
@@ -130,10 +142,10 @@ proc fcmp outlib=work.cat_function.test ;
 		A = A ** 2;
 		B = B ** 2;
 		C = C ** 2;
-		cmax = max(A,B,C);
-		if cmax = C 
+		smax = max(A,B,C);
+		if smax = C 
 			then res = A + B - C;
-			else if cmax = B 
+			else if smax = B 
 					then res = A + C - B;
 					else res = B + C - A;
 		if res=0
@@ -144,7 +156,12 @@ proc fcmp outlib=work.cat_function.test ;
 run;
 
 /*---------------------------*/
-/* 9 - IsIsoscelesTriangle() */
+/* 8 - IsIsoscelesTriangle() */
+/* 
+We start from the assumption 
+that we know that the 3 lengths 
+can form a triangle
+*/
 /*---------------------------*/
 
 proc fcmp outlib=work.cat_function.test ;
@@ -156,11 +173,11 @@ proc fcmp outlib=work.cat_function.test ;
 	endsub;
 run;
 
-/*------------------------------*/
-/* 10 - IsEquilateralTriangle() */
-/*------------------------------*/
+/*-----------------------------*/
+/* 9 - IsEquilateralTriangle() */
+/*-----------------------------*/
 
-proc fcmp outlib=work.cat_function.test ;
+proc fcmp outlib=work.cat_function.test;
 	function IsEquilateralTriangle(A,B,C);
 		if (A = B and B = C)
 			then res=1;
@@ -168,6 +185,64 @@ proc fcmp outlib=work.cat_function.test ;
 	return(res);
 	endsub;
 run;
+
+/*---------------------*/
+/* 10 - TriangleArea() */
+/*---------------------*/
+
+proc fcmp outlib=work.cat_function.test;
+	function TriangleArea(C1,C2,C3);
+		/* Heron's formula */
+		/*
+		s = (A + B + C) / 2;
+		put s=;
+		res = s * (s - A) * (s - B) * (s - C);
+		put res=;
+		if res<=0
+			then res=.;
+			else res = sqrt(res); 
+		put res=;
+		*/
+		/*sort sides of the triangle :*/
+		/*
+		if A > B 
+			then do; 
+				if C > A
+					then do; 
+						c1=B; c2=A; c3=C; 
+					end;
+					else do;
+						if C > B 
+							then do; c1=B; c2=C; c3=A; end;
+							else do; c1=C; c2=B; c3=A; end;
+					end;
+			end;
+			else do;
+				if C > B
+					then do;
+						c1=A; c2=B; c3=C;
+					end;
+					else do;
+						if C > A 
+							then do;c1=A; c2=C; c3=B; end;
+							else do;c1=C; c2=A; c3=B; end;
+					end;
+			end;
+		*/
+		/*sort sides of the triangle : (easy way)*/ 
+		call sortn(C1,C2,C3);
+		/* compute area :*/
+		t1 = (c1+(c2+c3)) * (c3-(c1-c2)) * (c3+(c1-c2)) * (c1+(c2-c3));
+		put t1=;
+		if t1<=0
+			then res=.;
+			else do;
+				res = (t1 ** 0.5) * 0.25;
+			end;
+	return(res);
+	endsub;
+run;
+
 
 /* Examples : */
 data test;
@@ -178,8 +253,8 @@ data test;
 	CirPeri = CirclePerimeter(nb);
 	CirArea = CircleArea(nb);
 	VolSphere = VolumeSphere(nb);
-	/*Pythagore = Pythagore(nb,c2,Hypo);*/
 	Rtriangle = IsRightTriangle(nb,nb1,nb2);
 	Itriangle = IsIsoscelesTriangle(nb,nb1,nb2);
 	Etriangle = IsEquilateralTriangle(nb,nb1,nb2);
+	Tarea = TriangleArea(nb,nb1,nb2);
 run;
