@@ -19,6 +19,7 @@ In the data folder, some datasets are available.
 - Use Put or Input ? [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/put_or_input.md)
 - Putn/c() and Inputn/c() [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/putnc_and_inputnc.sas)
 - Sort multiples columns horizontally [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/sort_multiples_columns_horizontally.sas)
+- Command line [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/command_line.sas)
 
 
 **Import Data :**
