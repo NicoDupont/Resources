@@ -18,6 +18,7 @@ In the data folder, some datasets are available.
 - Scan sas log file to find ERROR or WARNING [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/scan_log.sas)
 - Use Put or Input ? [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/put_or_input.md)
 - Putn/c() and Inputn/c() [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/putnc_and_inputnc.sas)
+- Sort multiples columns horizontally [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/sort_multiples_columns_horizontally.sas)
 
 
 **Import Data :**
