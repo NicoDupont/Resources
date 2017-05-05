@@ -10,9 +10,9 @@
 * and get results if needed ;
 
 /*
-1 - Data
-2 - Filename
-3 - Macro : %CmdLine(cmd)
+1 - Data _NULL_
+2 - Filename and pipe
+3 - Macro : %CmdLine(cmd,table=_NULL_)
 */
 
 dm log 'clear';
