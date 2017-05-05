@@ -1,6 +1,6 @@
 /*------------------------------------*/
 /* Creation date : 03/05/2017  (fr)   */
-/* Last update :   04/05/2017  (fr)   */
+/* Last update :   05/05/2017  (fr)   */
 /* Author(s) : Nicolas Dupont         */
 /* Contributor(s) : 		      */
 /* Tested on SAS Studio 9.4           */
@@ -18,7 +18,6 @@
 9  - IsEquilateralTriangle() -- returns 1 if the triangle is equilateral
 10 - TriangleArea() ----------- returns the area of a triangle
 */
-
 
 dm log 'clear';
 dm lst 'clear';
@@ -233,9 +232,9 @@ proc fcmp outlib=work.cat_function.test;
 		call sortn(C1,C2,C3);
 		/* compute area :*/
 		t1 = (c1+(c2+c3)) * (c3-(c1-c2)) * (c3+(c1-c2)) * (c1+(c2-c3));
-		put t1=;
+		/*put t1=;*/
 		if t1<=0
-			then res=.;
+			then res=.; /*0?*/
 			else do;
 				res = (t1 ** 0.5) * 0.25;
 			end;
