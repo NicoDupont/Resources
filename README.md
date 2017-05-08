@@ -1,8 +1,8 @@
-![](https://img.shields.io/badge/SAS-9.3-B34936.svg) 
-![](https://img.shields.io/badge/SAS-9.4-B34936.svg) 
-![](https://img.shields.io/badge/VBA-Excel--2010-945DB7.svg) 
-![](https://img.shields.io/badge/VBA-Excel--2013-945DB7.svg) 
-![](https://img.shields.io/badge/Python-3.6-3572A5.svg) 
+![](https://img.shields.io/badge/SAS-9.3-B34936.svg)
+![](https://img.shields.io/badge/SAS-9.4-B34936.svg)
+![](https://img.shields.io/badge/VBA-Excel--2010-945DB7.svg)
+![](https://img.shields.io/badge/VBA-Excel--2013-945DB7.svg)
+![](https://img.shields.io/badge/Python-3.6-3572A5.svg)
 ![](https://img.shields.io/badge/R-3.4-198CE7.svg)
 
 ## Resources
@@ -17,7 +17,7 @@ This why you can see same functions/parts on SAS, Python, etc..
 
  - [SAS](https://github.com/NicoDupont/Resources/tree/master/SAS)  (9.3,9.4)
  - [Python](https://github.com/NicoDupont/Resources/tree/master/Python) (3.6)
- - [VBA-Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
  - [R](https://github.com/NicoDupont/Resources/tree/master/R) (3.4)
  - [SQL](https://github.com/NicoDupont/Resources/tree/master/SQL) (Various..)
-
+ - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
+ - [Basic - LibreOffice](https://github.com/NicoDupont/Resources/tree/master/Dev-LibreOffice) (5.3)
