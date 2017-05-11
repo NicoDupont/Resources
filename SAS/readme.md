@@ -20,6 +20,7 @@ In the data folder, some datasets are available.
 - Putn/c() and Inputn/c() [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/putnc_and_inputnc.sas)
 - Sort multiples columns horizontally [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/sort_multiples_columns_horizontally.sas)
 - Command line [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/command_line.sas)
+- Put the calculation time on the log or in a table [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/prog_calculation_time.sas)
 
 
 **Import Data :**
