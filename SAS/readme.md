@@ -22,7 +22,6 @@ In the data folder, some datasets are available.
 - Command line [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/command_line.sas)
 - Put the calculation time on the log or in a table [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/prog_calculation_time.sas)
 
-
 **Import Data :**
 
 - Get data from internet with proc http [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ImportData/get_data_from_internet.sas)
@@ -45,7 +44,7 @@ In the data folder, some datasets are available.
 - Rename a sas dataset without reading it [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/rename_dataset.sas)
 - Delete sas files in a library [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/delete_sas_files_library.sas)
 - Change length of a variable in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/change_length_dataset.sas)
-
+- Align character values in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/align_character_values.sas)
 
 **Date :**
 
