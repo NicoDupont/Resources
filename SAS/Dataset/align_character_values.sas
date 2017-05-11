@@ -10,17 +10,23 @@
 data temp;
 
 	alphabetw='  a  ';
+	/*default*/
 	chardate=put(alphabetw,$10.);
 	output;
+	/*align left*/
 	chardate=put(alphabetw,$10. -l);
 	output ;
+	/*align center*/
 	chardate=put(alphabetw,$10. -c);
 	output ;
+	/*align right*/
 	chardate=put(alphabetw,$10. -r);
 	output ;
 	
+	/*align right*/
 	chardate=right(alphabetw);
 	output ;
+	/*align left*/
 	chardate=left(alphabetw);
 	output ;
 	 
