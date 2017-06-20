@@ -15,9 +15,9 @@ I try to implement my code on each langage that I can use.
 This why you can see same functions/parts on SAS, Python, etc..  
 
 
- - [SAS](https://github.com/NicoDupont/Resources/tree/master/SAS)  (9.3,9.4)
+ - [SAS](https://github.com/NicoDupont/Resources/tree/master/SAS)  (9.2,9.3,9.4)
  - [Python](https://github.com/NicoDupont/Resources/tree/master/Python) (3.6)
  - [R](https://github.com/NicoDupont/Resources/tree/master/R) (3.4)
  - [SQL](https://github.com/NicoDupont/Resources/tree/master/SQL) (Various..)
- - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
+ - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013,2016)
  - [Basic - LibreOffice](https://github.com/NicoDupont/Resources/tree/master/LibreOffice) (5.3)
