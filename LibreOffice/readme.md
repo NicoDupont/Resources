@@ -11,4 +11,5 @@ An example is provided if possible.
 - Factorial [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/factorial.bas)
 - Prime number [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/is_prime.bas)
 - Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/iseven.bas)
-- Divisble By [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/isdivisibleby.bas)
+- Divisble By [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/isdivisibleby.bas)  
+- Division [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/division.bas)  
