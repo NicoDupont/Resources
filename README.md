@@ -17,6 +17,5 @@ This why you can see same functions/parts on SAS, Python, etc..
  - [Python](https://github.com/NicoDupont/Resources/tree/master/Python) (3.6)
  - [R](https://github.com/NicoDupont/Resources/tree/master/R) (3.4)
  - [SQL](https://github.com/NicoDupont/Resources/tree/master/SQL) (Various..)
- - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013,2016)
+ - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
  - [Basic - LibreOffice](https://github.com/NicoDupont/Resources/tree/master/LibreOffice) (5.3)  
- - [KSH (Korn Shell)](https://github.com/NicoDupont/Resources/tree/master/KSH) ()  
