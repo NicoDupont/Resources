@@ -10,6 +10,7 @@ Option Explicit
 
 '-------------------------------------------------
 ' The function IsEven() (Paire) returns 1 if is even or 0 if odd (Impaire) or not integer
+' This function is available by default in LibreOffice..
 '-------------------------------------------------
 
 Function IsEven(nb As Double) As Byte
