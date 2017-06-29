@@ -47,6 +47,8 @@ In the data folder, some datasets are available.
 - Align character values in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/align_character_values.sas)
 - Operation on all num or char columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/operation_on_all_num_or_char_column.sas)  
 
+**Graphic :**  
+
 **Date :**
 
 - Quarter and Semester function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/quarter_and_semester_function.sas)
