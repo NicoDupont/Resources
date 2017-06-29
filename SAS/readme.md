@@ -45,6 +45,7 @@ In the data folder, some datasets are available.
 - Delete sas files in a library [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/delete_sas_files_library.sas)
 - Change length of a variable in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/change_length_dataset.sas)
 - Align character values in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/align_character_values.sas)
+- Operation on all num or char columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/operation_on_all_num_or_char_column.sas)  
 
 **Date :**
 
