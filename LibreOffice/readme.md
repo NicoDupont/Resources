@@ -13,3 +13,5 @@ An example is provided if possible.
 - Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/iseven.bas)
 - Divisble By [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/isdivisibleby.bas)  
 - Division [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/division.bas)  
+- Convert Miles <=> Kilometers [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/convert_miles_kilometers.bas)
+- Convert Celcius <=> Fahrenheit [link](https://github.com/NicoDupont/Resources/blob/master/LibreOffice/Math/convert_celcius_fahrenheit.bas)
