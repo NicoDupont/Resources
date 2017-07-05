@@ -21,6 +21,7 @@ In the data folder, some datasets are available.
 - Sort multiples columns horizontally [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/sort_multiples_columns_horizontally.sas)
 - Command line [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/command_line.sas)
 - Put the calculation time on the log or in a table [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/prog_calculation_time.sas)
+- Physical path from libname [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/physical_path_from_libname.sas)
 
 **Import Data :**
 
