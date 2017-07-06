@@ -1,5 +1,5 @@
 
-![](https://www.python.org/static/img/python-logo.png)
+![### Python](https://cdn.datacamp.com/main-app/assets/technologies/python-logo-edd2f22dcc94f42c38c4db253c94bebc3c38d1ae2848c9f5b32dbde638d11572.svg)
 ---
 
 For each resource, you have a .py or .md file.  
