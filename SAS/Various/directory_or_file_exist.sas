@@ -91,7 +91,6 @@ Log results :
  NOTE: Libref T2 has been deassigned.
 --------------------------------------------*/
 
-
 /* # Commande line option : */
 %macro CreateDir(path); 
 	data _NULL_;
@@ -103,3 +102,8 @@ Log results :
 *%CreateDir(/home/nicolasdupont0/resources_github/test3) ;
 
 
+/* # dcreate() SAS function */
+data _NULL_;
+	dirname  = 'test4';
+	newdir = dcreate(dirname,'/home/nicolasdupont0/resources_github/');
+run;
