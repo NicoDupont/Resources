@@ -22,7 +22,7 @@ In the data folder, some datasets are available.
 - Command line [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/command_line.sas)
 - Put the calculation time on the log or in a table [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/prog_calculation_time.sas)
 - Physical path from libname [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/physical_path_from_libname.sas)
-- Check if a direcotry or a file exist (and create dir) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/directory_or_file_exist.sas)
+- Check if a directory or a file exist (and create dir) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/directory_or_file_exist.sas)
 
 **Import Data :**
 
