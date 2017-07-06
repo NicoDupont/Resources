@@ -69,9 +69,10 @@ data test;
 run;
 
 
-/*-------------------------------------*/
-/*  1 - PublicHolidayFr()    		   */
-/*-------------------------------------*/
+/*-------------------------------------
+1 - PublicHolidayFr()    		  
+For usa or canada, it may be easy to use directly the sas holiday() function 
+-------------------------------------*/
 
 proc fcmp outlib=work.cat_function.test;
 	function PublicHolidayFr(DateDay);
