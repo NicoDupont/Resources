@@ -1,5 +1,5 @@
 
-/*Available since sas 9.2  [SAS Doc](http://support.sas.com/kb/35/591.html)*/
+/*Available since sas 9.2 see sas doc : http://support.sas.com/kb/35/591.html*/
 
 options minoperator;
 %macro putme(name=) / mindelimiter=',';
