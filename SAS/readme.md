@@ -25,6 +25,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Put the calculation time on the log or in a table [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/prog_calculation_time.sas)
 - Physical path from libname [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/physical_path_from_libname.sas)
 - Check if a directory or a file exist (and create dir) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/directory_or_file_exist.sas)
+- Get the name and path from the current executing program [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/path_of_the_executing_program.sas)  
 
 **Import Data :**
 
