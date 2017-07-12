@@ -52,6 +52,9 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Align character values in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/align_character_values.sas)
 - Operation on all num or char columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/operation_on_all_num_or_char_column.sas)  
 
+**Data Analysis :**  
+ - Head and Tail macro to visualize data [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head_and_tail.sas)
+
 **Graphic :**  
 
 **Date :**
