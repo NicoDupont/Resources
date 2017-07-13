@@ -53,5 +53,10 @@ Variable Definition	Key :
     - 3rd = Lower
 
 Age: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5  
-Sibsp: The dataset defines family relations in this way... Sibling = brother, sister, stepbrother, stepsister Spouse = husband, wife (mistresses and fiancés were ignored)  
-Parch: The dataset defines family relations in this way... Parent = mother, father. Child = daughter, son, stepdaughter, stepson. Some children travelled only with a nanny, therefore parch=0 for them.  
+Sibsp: The dataset defines family relations in this way...   
+Sibling = brother, sister, stepbrother, stepsister 
+Spouse = husband, wife (mistresses and fiancés were ignored)    
+Parch: The dataset defines family relations in this way...  
+Parent = mother, father.  
+Child = daughter, son, stepdaughter, stepson.  
+Some children travelled only with a nanny, therefore parch=0 for them.  
