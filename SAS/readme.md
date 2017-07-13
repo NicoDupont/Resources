@@ -53,7 +53,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Operation on all num or char columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/operation_on_all_num_or_char_column.sas)  
 
 **Data Analysis :**  
- - Head and Tail macro to visualize data [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head_and_tail.sas)
+ - Head and Tail macro to visualize data [Head](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head.sas)[Tail](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/tail.sas)
 
 **Graphic :**  
 
