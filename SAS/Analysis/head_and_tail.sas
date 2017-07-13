@@ -1,6 +1,6 @@
 /*------------------------------------
 * Created :       12/07/2017  (fr)  
-* Last update :   12/07/2017  (fr)   
+* Last update :   13/07/2017  (fr)   
 * Author(s) : Nicolas Dupont         
 * Contributor(s) : 		          
 * Tested on SAS Studio 9.4 onDemand         
@@ -60,7 +60,7 @@ libname DATA "/home/nicolasdupont0/Data";
 	%if &wmin=no   %then %let wmin=;   %else %let wmin=width=min;
 	%if &nlabel=no %then %let nlabel=; %else %let nlabel=LABEL;
 	
-	proc print data=&data (firstobs=%eval(&lobs-&obs) obs=%eval(&obs.+(&lobs-1))) &nuubs. &wmin. &nlabel.;
+	proc print data=&data (firstobs=%eval(&lobs-&obs+1) obs=%eval(&obs.+(&lobs-1))) &nuubs. &wmin. &nlabel.;
 	Title &title;
 	run;
 	
