@@ -55,6 +55,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 
 **Data Analysis :**  
  - Head and Tail macro to visualize data [Head](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head.sas) - [Tail](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/tail.sas)
+ - Distribution and cumulative distribution (ecdf) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf.sas)  
 
 **Graphic :**  
 
