@@ -30,6 +30,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 **Import Data :**
 
 - Get data from internet with proc http [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ImportData/get_data_from_internet.sas)
+- Import csv file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ImportData/import_csv_file.sas)
 
 **Export Data :**
 
