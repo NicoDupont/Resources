@@ -35,7 +35,7 @@
 
 %ecdf(sashelp.cars,Horsepower);
 
-/* Without the proc inivariate : */
+/* Without the proc univariate : */
 
 %macro ecdf2(data,var);
 
@@ -54,7 +54,6 @@
 	    ecdf = int(p*100); 
 	    call symput("nbvalue",compress(nv)); 
 	run;
-	proc sort data=tmp; by nv; run;
 	
 	
 	/*
