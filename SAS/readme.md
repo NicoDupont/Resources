@@ -2,7 +2,7 @@
 ![](https://support.sas.com/images/SAS_TPTK_logo.gif)
 ---
 
-For each resource, you have a .sas or a .md file.  
+For each resource, you have a .sas or a .md file or a sas jupyter notebook.  
 In the data folder, some datasets are available.  
 
 Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets)  
