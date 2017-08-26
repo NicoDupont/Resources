@@ -1,5 +1,6 @@
 
 ![](https://support.sas.com/images/SAS_TPTK_logo.gif)
+
 ---
 
 For each resource, you have a .sas or a .md file.  
@@ -27,12 +28,12 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Check if a directory or a file exist (and create dir) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/directory_or_file_exist.sas)
 - Get the name and path from the current executing program [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/path_of_the_executing_program.sas)  
 
-**Import Data :**
+**Import Data :**  
 
 - Get data from internet with proc http [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ImportData/get_data_from_internet.sas)
 - Import csv file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ImportData/import_csv_file.sas)
 
-**Export Data :**
+**Export Data :**  
 
 - Export a dataset to a delimited flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ExportData/export_dataset_to_a_text_file.sas)
 - Export a dataset to a structured flat file [link](https://github.com/NicoDupont/Resources/blob/master/SAS/ExportData/export_dataset_to_a_structured_flat_file.sas)
@@ -59,7 +60,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 
 **Graphic :**  
 
-**Date :**
+**Date :**  
 
 - Quarter and Semester function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/quarter_and_semester_function.sas)
 - Month  in string [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/month.sas)
@@ -73,7 +74,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Date Excel vs SAS [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/excel_vs_sas.md)
 
 
-**Math :**
+**Math :**  
 
 - Decimal part [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/decimal_part.sas)
 - Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Math/is_even_or_odd.sas)
