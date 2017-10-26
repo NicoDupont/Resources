@@ -8,6 +8,11 @@ In the data folder, some datasets are available.
 Graph Gallery [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic)    
 Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets)  
 
+**Data Analysis :**  
+
+ - Head and Tail macro to visualize data [Head](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head.sas) - [Tail](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/tail.sas)  
+ - Distribution and cumulative distribution (ecdf) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf.sas) -  [notebook](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf_sas_notebook.ipynb)  
+
 **Various :**  
 
 - Lag without the lag function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/lag_without_lag_function.md)
@@ -53,14 +58,6 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Align character values in a dataset [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/align_character_values.sas)
 - Operation on all num or char columns [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Dataset/operation_on_all_num_or_char_column.sas)  
 
-**Data Analysis :**  
-
- - Head and Tail macro to visualize data [Head](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head.sas) - [Tail](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/tail.sas)  
- - Distribution and cumulative distribution (ecdf) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf.sas) -  [notebook](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf_sas_notebook.ipynb)  
-
-**Graphic :**  
-
-
 **Date :**  
 
 - Quarter and Semester function [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/quarter_and_semester_function.sas)
@@ -73,7 +70,6 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Add or Substract month / year to a date at the same day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/add_month_year.sas)
 - Compute the age [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/compute_age.sas)
 - Date Excel vs SAS [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Date/excel_vs_sas.md)  
-
 
 **Math :**  
 
