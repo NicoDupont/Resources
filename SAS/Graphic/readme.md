@@ -10,3 +10,9 @@
 - Scatter plot with jitter option (9.4M5) [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/scatterjitter.sas)
 - Box Plot [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/boxplot.sas)
 - Cumulative distribution [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf.sas) [Notebook](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf_sas_notebook.ipynb)
+
+
+***Correlation :***
+
+- ScatterPlot [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/scatterplot.sas)
+- Heatmap [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap.sas)
