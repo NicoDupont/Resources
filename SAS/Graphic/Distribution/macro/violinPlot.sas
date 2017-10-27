@@ -59,6 +59,10 @@
     %if &outcomeVar      = %then %goto exit;
     %if &widthMultiplier = %then %let  widthMuliplier = 1;
 
+    /*Improvement to operate the macro on sas studio without ERROR*/
+	/*%if &SYSSCP 		 = WIN %then %let dlm=\; %else %let dlm=/;*/ 
+	%if &SYSSCP 		 = WIN %then %let dirtemp=temp; %else %let dirtemp=work; 
+	
     /*--------------------------------------------------------------------------------------------\
       Data manipulation
     \--------------------------------------------------------------------------------------------*/
@@ -316,23 +320,9 @@
         ods results off;
 
             ods listing
-                gpath = "%sysfunc(pathname(temp))"
+                gpath = "%sysfunc(pathname(&dirtemp.))"
                 style = styles.violin;
-            ods graphics /
-                reset = all
-                border = no
-                width = 10in
-                height = 7.5in
-                imagename = 'violinPlotImage'
-                imagefmt = pdf
-                outputfmt = pdf;
-
-            ods pdf
-                file  = "&outPath\&outName..pdf"
-                style = styles.violin;
-                title1 j = c "&outcomeVarLabel";
-                %if &panelVar ne %then title2 j = c "Paneled by &panelVarLabel";;
-
+            
                 %macro violin;
                     %if &panelVar ne %then %do;
                         proc sgpanel nocycleattrs noautolegend
@@ -526,8 +516,6 @@
                         run;
                     %end;
                 %mend  violin;
-                %violin
-            ods pdf close;
 
             ods graphics /
                 reset = all
