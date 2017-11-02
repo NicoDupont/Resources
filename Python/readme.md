@@ -25,4 +25,5 @@ In the data folder, some datasets are available.
 
 
 **Machine Learning :**  
-- Logloss [link](https://github.com/NicoDupont/Resources/blob/master/Python/Ml/logloss.py
+- Logloss [link](https://github.com/NicoDupont/Resources/blob/master/Python/Ml/logloss.py)
+- Multilabel train test split [link](https://github.com/NicoDupont/Resources/blob/master/Python/Ml/multilabel.py)
