@@ -1,0 +1,23 @@
+Sketch uses 8,592 bytes (13%) of program storage space. Maximum is 65,536 bytes.
+Global variables use 1,968 bytes of dynamic memory.
+Got NACK from device on command 0x43
+Can't initiate chip erase!
+Failed to erase memory
+stm32flash Arduino_STM32_0.9
+
+http://github.com/rogerclarkmelbourne/arduino_stm32
+
+Using Parser : Raw BINARY
+Interface serial_posix: 230400 8E1
+Version      : 0x22
+Option 1     : 0x00
+Option 2     : 0x00
+Device ID    : 0x0410 (Medium-density)
+- RAM        : 20KiB  (512b reserved by bootloader)
+- Flash      : 128KiB (sector size: 4x1024)
+- Option RAM : 16b
+- System RAM : 2KiB
+Write to memory
+Erasing memory
+
+An error occurred while uploading the sketch
