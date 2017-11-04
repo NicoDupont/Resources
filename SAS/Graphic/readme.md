@@ -1,7 +1,7 @@
 **A SAS graph Gallery** 
 
 
-***Distribution :***
+***[Distribution](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution) :***
 
 - Histogram [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/histogram.sas)
 - Density [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/density.sas)
@@ -12,7 +12,7 @@
 - Cumulative distribution [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf.sas) [Notebook](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf_sas_notebook.ipynb)
 
 
-***Correlation :***
+***[Correlation](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation) :***
 
 - Scatter Plot [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/scatterplot.sas)
 - Heatmap [SAS](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap.sas)
