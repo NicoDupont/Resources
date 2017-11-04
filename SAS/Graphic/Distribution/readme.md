@@ -2,10 +2,10 @@
 
 ***Box Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/boxplot.sas)
 
-![boxplot1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot1.png  "boxplot1")
-![boxplot2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot2.png  "boxplot2")
-![boxplot3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot3.png  "boxplot3")
-![boxplot4](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot4.png  "boxplot4")
+![boxplot1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/boxplot1.png  "boxplot1")
+![boxplot2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/boxplot2.png  "boxplot2")
+![boxplot3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/boxplot3.png  "boxplot3")
+![boxplot4](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/boxplot4.png  "boxplot4")
 
 
 ***Violin Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/violin.sas)
