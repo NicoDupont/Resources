@@ -1,6 +1,6 @@
 /*------------------------------------
 * Created :       26/10/2017  (fr)  
-* Last update :   26/10/2017  
+* Last update :   04/11/2017  
 * Author(s) : Nicolas Dupont         
 * Contributor(s) : 		          
 * On SAS Studio 9.4M4 onDemand 
@@ -14,6 +14,13 @@
 /*------------------------------------
 * Density graph with the proc sgplot
 -------------------------------------*/
+ods listing gpath="/home/nicolasdupont0/resources_github/Graph/Distribution/img" image_dpi=200;
+
+
+*---------------------------------------------------;
+ods graphics / 
+	reset = all attrpriority=color border = no width = 600px height = 400px 
+	imagename = "density1" imagefmt = png outputfmt = png antialiasmax = 10000;
 
 title '1# Distribution of the numerical variable horsepower in the cars dataset';
 proc sgplot data=sashelp.cars;
@@ -24,6 +31,10 @@ proc sgplot data=sashelp.cars;
   yaxis min=0;
 run;
 
+*---------------------------------------------------;
+ods graphics / 
+	reset = all attrpriority=color border = no width = 600px height = 400px 
+	imagename = "density2" imagefmt = png outputfmt = png antialiasmax = 10000;
 
 title '2# Distribution of two numerical variables MSRP and Invoice from the cars dataset';
 proc sgplot data=sashelp.cars;
