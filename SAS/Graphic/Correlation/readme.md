@@ -5,16 +5,27 @@
 ![Scatterplot1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot1.png  "Scatterplot1")
 ![Scatterplot2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot2.png  "Scatterplot1")
 
+***Matrix :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/matrix.sas)
+
+![Matrix1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/matrix1.png  "Matrix1")  
+![Matrix2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/matrix2.png  "Matrix2")  
+![Matrix3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/matrix3.png  "Matrix3")  
+
 ***Connected Scatter Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/connected_scatterplot.sas)
 
 ![ConnectedScatterplot1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/connected_scatterplot1.png  "ConnectedScatterplot1")
 ![ConnectedScatterplot2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/connected_scatterplot2.png  "ConnectedScatterplot2")
 
-***Heatmap :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap.sas)
+***Correlation Heatmap :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap.sas)
 
 ![heatmap1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap1.png  "heatmap1")
 ![heatmap2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2.png  "heatmap2")
 ![heatmap3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap3.png  "heatmap3")
+
+***Heatmap :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap2.sas)
+
+![heatmap21](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2_1.jpeg  "heatmap21")
+![heatmap22](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2_2.jpeg  "heatmap22")
 
 ***Bubble Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/bubble.sas)
 
