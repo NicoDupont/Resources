@@ -18,8 +18,8 @@
 
 ***Heatmap :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap2.sas)
 
-![heatmap21](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2_1.png  "heatmap21")
-![heatmap22](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2_2.png  "heatmap22")
+![heatmap21](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2_1.jpeg  "heatmap21")
+![heatmap22](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/heatmap2_2.jpeg  "heatmap22")
 
 ***Bubble Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/bubble.sas)
 
