@@ -15,6 +15,7 @@
 ***[Correlation](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation) :***
 
 - Scatter Plot [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/scatterplot.sas)
+- Matrix [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/matrix.sas)
 - Correlation Heatmap [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap.sas)
 - Heatmap [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/heatmap2.sas)
 - Connected Scatter Plot (line) [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/connected_scatterplot.sas)
