@@ -5,6 +5,12 @@
 ![Scatterplot1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot1.png  "Scatterplot1")
 ![Scatterplot2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/scatterplot2.png  "Scatterplot1")
 
+***Matrix :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/matrix.sas)
+
+![Matrix1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/matrix1.png  "Matrix1")  
+![Matrix2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/matrix2.png  "Matrix2")  
+![Matrix3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/matrix3.png  "Matrix3")  
+
 ***Connected Scatter Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/connected_scatterplot.sas)
 
 ![ConnectedScatterplot1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/img/connected_scatterplot1.png  "ConnectedScatterplot1")
