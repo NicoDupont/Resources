@@ -1,6 +1,6 @@
 /*------------------------------------
 * Last update :   06/11/2017  
-* Author(s) : https://blogs.sas.com/content/iml/2014/08/20/heat-map-in-sasiml.html      
+* Author(s) : Nicolas Dupont     
 * Contributor(s) : 		          
 * On SAS Studio 9.4M4 onDemand 
 * Update :
