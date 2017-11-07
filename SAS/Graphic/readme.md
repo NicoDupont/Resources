@@ -25,4 +25,4 @@
 
 ***[Rank](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank) :***
 
-- HBAR / VBAR [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/bar.sas)
+- Hbar / Vbar (Bar Chart) [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/bar.sas)
