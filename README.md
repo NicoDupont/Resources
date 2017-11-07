@@ -25,8 +25,4 @@ This why you can see same functions/parts on SAS, Python, etc..
  
  
  #### Project Organization
- 
-  |-readme.md
-  |-SAS
-     |- Graph
-  |-Python
+
