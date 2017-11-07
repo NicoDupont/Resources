@@ -21,3 +21,8 @@
 - Connected Scatter Plot (line) [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/connected_scatterplot.sas)
 - Bubble Plot [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/bubble.sas)
 - Bar Chart Correlation Plot [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/barchartcorrelation.sas)
+
+
+***[Rank](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank) :***
+
+- HBAR / VBAR [example](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/bar.sas)
