@@ -1,1 +1,1 @@
-**A collection of graphics made with Python (with Matplotlib, Seaborn, Bokeh or Brunel)**
+**A collection of graphics made with Python (Matplotlib, Seaborn, Bokeh or Brunel)**
