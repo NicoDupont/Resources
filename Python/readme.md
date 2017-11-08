@@ -5,10 +5,6 @@
 For each resource, you have a .py or .md file.  
 In the data folder, some datasets are available.  
 
-**Date :**
-
-- Quarter and Semester (in progress..) [link](https://github.com/NicoDupont/Resources/blob/master/Python/Date/quarter_and_semester.py)
-
 **Math :**  
 
 - Is Even or Odd [link](https://github.com/NicoDupont/Resources/blob/master/Python/Math/is_even_or_odd.py)
@@ -22,7 +18,6 @@ In the data folder, some datasets are available.
 - Mean [link](https://github.com/NicoDupont/Resources/blob/master/Python/Stats/mean.py)
 - Variance and Covariance [link](https://github.com/NicoDupont/Resources/blob/master/Python/Stats/variance_covariance.py)
 - Compute the Pearson correlation coefficient between 2 variables [link](https://github.com/NicoDupont/Resources/blob/master/Python/Stats/pearson_coeff.py)
-
 
 **Machine Learning :**  
 - Logloss [link](https://github.com/NicoDupont/Resources/blob/master/Python/Ml/logloss.py)
