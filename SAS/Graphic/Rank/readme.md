@@ -9,3 +9,9 @@
 ![Bar5](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/bar5.png  "Bar5")
 ![Bar6](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/bar6.png  "Bar6")
 ![Bar7](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/bar7.png  "Bar7")
+
+
+***Parallel Coordinates Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/parallel.sas)
+
+![Parallel1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/parallel1.png  "Parallel1")
+![Parallel2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/parallel2.png  "Parallel2")
