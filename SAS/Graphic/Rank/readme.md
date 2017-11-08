@@ -15,3 +15,9 @@
 
 ![Parallel1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/parallel1.png  "Parallel1")
 ![Parallel2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/parallel2.png  "Parallel2")
+
+***Radar / Spider Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/radarsas)
+
+![Radar1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/radar1.png  "Radar1")
+![Radar2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/radar2.png  "Radar2")
+![Radar3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank/img/radar3.png  "Radar3")
