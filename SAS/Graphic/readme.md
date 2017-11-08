@@ -1,5 +1,4 @@
-**A SAS graph Gallery** 
-
+**A collection of graphics made with SAS** 
 
 ***[Distribution](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution) :***
 
