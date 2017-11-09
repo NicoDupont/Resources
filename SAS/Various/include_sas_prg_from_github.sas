@@ -14,7 +14,7 @@
 %let sasfile = SAS/Analysis/head.sas;
 %let sasrawfileURL = %sysfunc(tranwrd(%nrbquote(&repo), github.com, raw.githubusercontent.com))/master/&sasfile;
 
-/*%put &fileURL;*/
+/*%put &sasrawfileURL;*/
 
 filename fileURL url "&sasrawfileURL";
 	%include fileURL;
