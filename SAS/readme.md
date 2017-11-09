@@ -11,7 +11,8 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 
  - Distribution [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribition)
  - Correlation [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation)
-
+ - Rank [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank)
+ 
 **Data Analysis :**  
 
  - Head and Tail macro to visualize data [Head](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head.sas) - [Tail](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/tail.sas)  
