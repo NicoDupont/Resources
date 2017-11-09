@@ -1,6 +1,6 @@
 /*------------------------------------
 * Created :       11/07/2017  (fr)
-* Last update :   11/07/2017  (fr)
+* Last update :   09/11/2017  (fr)
 * Author(s) : Nicolas Dupont
 * Contributor(s) :
 * Tested on SAS Studio 9.4 onDemand
