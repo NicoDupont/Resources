@@ -15,8 +15,8 @@
  * Those sas datasets are available here : https://github.com/NicoDupont/Resources/tree/master/SAS/Data
 -------------------------------------*/
 
-libname DATA "/home/nicolasdupont0/Data";
-%let dataset=data.titanic_train;
+*libname DATA "/home/nicolasdupont0/Data";
+*%let dataset=data.titanic_train;
 
 /*------------------------------------
 	* Head macro
@@ -38,5 +38,5 @@ libname DATA "/home/nicolasdupont0/Data";
 
 %mend head;
 
-%head(&dataset, fobs=1, obs=10, nuubs=yes, wmin=no, nlabel=no);
-%head(&dataset,title="First 10 rows in the submited dataset");
+*%head(&dataset, fobs=1, obs=10, nuubs=yes, wmin=no, nlabel=no);
+*%head(&dataset,title="First 10 rows in the submited dataset");
