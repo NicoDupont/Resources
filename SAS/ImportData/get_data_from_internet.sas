@@ -4,15 +4,14 @@
 * Author(s) : Nicolas DUPONT           
 * Contributor(s) : 		            
 * Tested on SAS Studio 9.4 ondemand   
-* Comment : The csv file needs to be in unix format 
-*			(In windows format. The code do not work because there is a trouble with the line break) 
+* Comment : 
 ---------------------------------------*/
 
 /*
 How to get data from internet and use them in a sas program.
 */
 
-FILENAME download TEMP;
+FILENAME download TEMP TERMSTR=LF /*(TERMSTR=CRLF / for windows file)*/;
  
 /* Download the file from the Internet. Here on my Github repo. */
 
@@ -26,5 +25,6 @@ PROC IMPORT DATAFILE=download
 	DBMS=csv
 	OUT=work.titanic_train replace;	
 RUN;
+
 
 filename download clear;
