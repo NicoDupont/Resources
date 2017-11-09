@@ -37,6 +37,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 - Physical path from libname [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/physical_path_from_libname.sas)
 - Check if a directory or a file exist (and create dir) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/directory_or_file_exist.sas)
 - Get the name and path from the current executing program [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/path_of_the_executing_program.sas)  
+- Include a sas program directly in another sas program from the source on github [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/include_sas_prg_from_github.sas) 
 
 **Import Data :**  
 
