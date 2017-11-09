@@ -16,6 +16,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 
  - Head and Tail macro to visualize data [Head](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/head.sas) - [Tail](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/tail.sas)  
  - Distribution and cumulative distribution (ecdf) [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf.sas) -  [notebook](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/ecdf_sas_notebook.ipynb)  
+ - Select the n better/last observations ranked by a numerical variable  [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Analysis/proc_rank.sas)
 
 **Various :**  
 
