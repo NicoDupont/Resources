@@ -1,10 +1,35 @@
 /*------------------------------------
 * Created :       10/05/2017  (fr)
-* Last update :   11/05/2017  (fr)
+* Last update :   14/11/2017  (fr)
 * Author(s) : Nicolas Dupont
 * Contributor(s) :
 * Tested on SAS Studio 9.4 onDemand
 -------------------------------------*/
+
+/*
+ * Simple way to put the calculation time on the log
+*/
+
+%let datetime_start = %sysfunc(TIME()) ;
+%put START TIME: %sysfunc(datetime(),datetime14.);
+
+/*Things to do ...*/
+data test;
+	do i=1 to 400000000;
+		a = i;
+		b = i**2;
+		c = b ** 0.5;
+		d = a * b * c;
+		e = d ** 3;
+		output;
+		drop i;
+	end;
+run;
+
+
+%put END TIME: %sysfunc(datetime(),datetime14.);
+%put PROCESSING TIME:  %sysfunc(putn(%sysevalf(%sysfunc(TIME())-&datetime_start.),mmss.)) (mm:ss) ;
+
 
 /*------------------------------------
 You can see an exemple on how to retrive
@@ -76,7 +101,7 @@ You can save the result in a table if needed.
 
 /*Things to do ...*/
 data test;
-	do i=1 to 1000000;
+	do i=1 to 400000000;
 		a = i;
 		b = i**2;
 		c = b ** 0.5;
@@ -95,7 +120,7 @@ run;
 
 /*Things to do ...*/
 data test;
-	do i=1 to 1000000;
+	do i=1 to 400000000;
 		a = i;
 		b = i**2;
 		c = b ** 0.5;
@@ -105,5 +130,5 @@ data test;
 		drop i;
 	end;
 run;
-/* Put result in table "duration"*/
+
 %PrgCalcTime(status=end,table=duration);
