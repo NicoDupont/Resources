@@ -1,7 +1,6 @@
 ![](https://img.shields.io/badge/SAS-9.X-B34936.svg)
 ![](https://img.shields.io/badge/VBA-Excel-945DB7.svg)
 ![](https://img.shields.io/badge/Python-3.X-3572A5.svg)
-![](https://img.shields.io/badge/R-3.X-198CE7.svg)
 
 ## Resources
 
@@ -17,8 +16,6 @@ This why you can see same functions/parts on SAS, Python, etc..
  - [SAS](https://github.com/NicoDupont/Resources/tree/master/SAS)  (9.2,9.3,9.4)(Base and Macro)
  - [Python](https://github.com/NicoDupont/Resources/tree/master/Python) (3.x)
  - [SQL](https://github.com/NicoDupont/Resources/tree/master/SQL) (Various..)
- - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
- - [Basic - LibreOffice](https://github.com/NicoDupont/Resources/tree/master/LibreOffice) (5.x)  
- - [Arduino](https://github.com/NicoDupont/Resources/tree/master/Arduino)    
+ - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013) 
  - [D3js](https://github.com/NicoDupont/Resources/tree/master/D3js) (4.x)
- - [R](https://github.com/NicoDupont/Resources/tree/master/R) (3.x)
+
