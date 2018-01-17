@@ -17,7 +17,8 @@
 ***Bee Swarm Plot :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/beeswarm.sas)
 
 ![Beeswarm1](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/beeswarm1.png  "Beeswarm1")
-![Beeswarm2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/beeswarm2.png  "Beeswarm1")
+![Beeswarm2](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/beeswarm2.png  "Beeswarm2")
+![Beeswarm3](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution/img/scatterjitter.png  "Beeswarm3")
 
 ***Histogram :*** [code examples](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation/histogram.sas)
 

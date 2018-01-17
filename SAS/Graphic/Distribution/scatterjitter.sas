@@ -1,10 +1,9 @@
 /*------------------------------------
 * Created :       27/10/2017  (fr)  
-* Last update :   27/10/2017  
+* Last update :   17/01/2018  
 * Author(s) : Nicolas Dupont         
 * Contributor(s) : 		          
-* On SAS Studio 9.4M4 onDemand 
-* Not work actualy because I'm not in 9.4M5 ..
+* On SAS Studio 9.4M5 onDemand 
 -------------------------------------*/
 
 ods listing gpath="/home/nicolasdupont0/resources_github/Graph/Distribution/img" image_dpi=200;
