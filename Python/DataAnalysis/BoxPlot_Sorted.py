@@ -9,7 +9,7 @@
 
 def BoxplotSorted(df, by, column, stat, order=True):
     # create a new DataFrame with one column by col in the groupby
-    # return a new dataframe sorted by median
+    # return a new dataframe with columns organised by median or mean ..
     df2 = pd.DataFrame({col:vals[column] for col, vals in df.dropna().groupby([by])})
     if stat == 'median':
         meds = df2.median().sort_values(ascending=order)
