@@ -1,7 +1,7 @@
 """
 ------------------------------------
  Creation date : 02/02/2018  (fr)
- Last update :   02/02/2018
+ Last update :   10/02/2018
  Author(s) : Nicolas DUPONT
  Contributor(s) :
  Tested on Python 3.6
@@ -9,7 +9,7 @@
 """
 
 #plot ecdf
-def PlotEcdf(data,title='',xlabel=''):
+def plot_single_ecdf(data,title='',xlabel=''):
     # Empirical cumulative distribution functions (ECDF)
     # Compute ECDF for a one-dimensional array of measurements and plot it.
     data = data.dropna()
