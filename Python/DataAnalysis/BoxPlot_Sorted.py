@@ -1,12 +1,12 @@
 """
 ------------------------------------
  Creation date : 04/02/2018  (fr)
- Last update :   04/02/2018
+ Last update :   10/02/2018
  Tested on Python 3.6
 ------------------------------------
 """
 
-def BoxplotSorted(df, by, column, stat, order=True):
+def plot_sorted_boxplot(df, by, column, stat, order=True):
     # create a new DataFrame with one column by col in the groupby
     # return a new dataframe with columns organised by median or mean ..
     df2 = pd.DataFrame({col:vals[column] for col, vals in df.dropna().groupby([by])})
