@@ -1,6 +1,10 @@
-Sql-Server  
+![](https://support.sas.com/images/SAS_TPTK_logo.gif)
+---
 
-Date Functions :  
+## Sql-Server    
 
- - working day
- - workable day
+**Date Functions :**    
+
+ - working day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/lag_without_lag_function.md)
+ - workable day [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/lag_without_lag_function.md)
+ - public holiday [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Various/lag_without_lag_function.md)
