@@ -1,0 +1,16 @@
+import java.awt.Color;
+import org.jfree.chart.plot.PiePlot;
+import java.text.DecimalFormat;
+import org.jfree.chart.labels.PieSectionLabelGenerator;
+import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
+
+
+PiePlot plot = (PiePlot) chart.getPlot();
+
+//pas de fond au legend sur le piechart
+plot.setLabelBackgroundPaint(Color.WHITE);
+plot.setLabelOutlineStroke(null);
+plot.setLabelShadowPaint(Color.WHITE);
+
+PieSectionLabelGenerator label_texte = new StandardPieSectionLabelGenerator("{2}", new DecimalFormat("#.#"),new DecimalFormat("#.#%"));
+plot.setLabelGenerator(label_texte);
