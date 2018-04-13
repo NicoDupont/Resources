@@ -1,0 +1,9 @@
+import java.awt.Color;
+import org.jfree.chart.plot.PiePlot;
+
+PiePlot plot = (PiePlot) chart.getPlot();
+
+//pas de fond au legend sur le piechart
+plot.setLabelBackgroundPaint(Color.WHITE);
+plot.setLabelOutlineStroke(null);
+plot.setLabelShadowPaint(Color.WHITE);
