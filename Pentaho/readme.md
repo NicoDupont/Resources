@@ -1,7 +1,9 @@
-Pentaho  
+# Pentaho  
 
-Pentaho Report Designer :  
+**Pentaho Report Designer :**  
 
 label-format for a piechart  
 legend_label_format for a piechart  
+
+**Pentaho Data integration (ETL) :** 
 
