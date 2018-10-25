@@ -1,0 +1,18 @@
+// set the min and max value for y axis from a parameters in pentaho report designer
+// put this code in scripting chart post processing (beanshell)
+
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.axis.CategoryAxis;
+import org.jfree.chart.axis.ValueAxis;
+
+// be carefull about the type
+Double y_max = dataRow.get("max_ano_y"); // max_ano_y is a paramater
+
+CategoryPlot chartPlot = chart.getCategoryPlot();
+
+//data = chartPlot.getDataset();
+//Integer y_max = data.getValue(0,0);
+
+ValueAxis yAxis= chartPlot.getRangeAxis();
+yAxis.setUpperBound(y_max);
+yAxis.setLowerBound(0);
