@@ -9,7 +9,7 @@ Snippets [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Snippets
 
 **[Graph Gallery](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic)**  
 
- - Distribution [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribition)
+ - Distribution [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Distribution)
  - Correlation [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Correlation)
  - Rank [link](https://github.com/NicoDupont/Resources/blob/master/SAS/Graphic/Rank)
  
