@@ -1,0 +1,9 @@
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.axis.CategoryAxis;
+import org.jfree.chart.axis.ValueAxis;
+import org.jfree.chart.axis.AxisLocation;
+
+CategoryPlot BarPlot = chart.getCategoryPlot();
+
+BarPlot.setRangeAxisLocation(AxisLocation.BOTTOM_OR_RIGHT);
+BarPlot.setDomainAxisLocation(AxisLocation.BOTTOM_OR_RIGHT);
