@@ -15,4 +15,3 @@ This why you can see same functions/parts on SAS, Python, etc..
 - [SQL](https://github.com/NicoDupont/Resources/tree/master/SQL) (Various..)
 - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
 - [Pentaho Report/Dashboard/PDI](https://github.com/NicoDupont/Resources/tree/master/Pentaho) (7.x +)
-- [D3js](https://github.com/NicoDupont/Resources/tree/master/D3js) (4.x)
