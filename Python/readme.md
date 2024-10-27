@@ -1,7 +1,10 @@
 ![### Python](https://cdn.datacamp.com/main-app/assets/technologies/python-logo-edd2f22dcc94f42c38c4db253c94bebc3c38d1ae2848c9f5b32dbde638d11572.svg)
 ---
 
-For each resource, you have a .py or .md file.  
+For each resource, you have a .py or .md file. 
+
+**Diverse :**
+ - Initialise logging [link](https://github.com/NicoDupont/Resources/blob/master/Python/Diverse/logging.py)
 
 
 **Math :**  
