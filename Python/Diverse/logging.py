@@ -9,6 +9,7 @@
 """
 
 import logging
+import datetime
 
 def ConfigLogging(logger,logfile,stream_level,file_level,rotating) -> None:
 	logger_levels = {
@@ -39,10 +40,10 @@ def ConfigLogging(logger,logfile,stream_level,file_level,rotating) -> None:
  
  
 #--------------------------------------
-#initialise logging config
+# initialise logging config
 # Choose if you want one log file or a daily log file
 # choose the logging level for stream and file
-#day = GetDayTime(0)
+dat = datetime.datetime.now()
 logger = logging.getLogger(__name__)#.addHandler(logging.NullHandler())
 #logfile = "log/arrosage_"+str(day.day)+"_"+str(day.month)+"_" +str(day.year)+".txt"
 logfile = "log/log.txt"

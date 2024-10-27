@@ -14,5 +14,5 @@ But do not hesitate to send me an email if you see a mistake, to add some improv
 - [SQL](https://github.com/NicoDupont/Resources/tree/master/SQL) (Various..)
 - [VBA - Excel](https://github.com/NicoDupont/Resources/tree/master/VBA-Excel) (2010,2013)
 - [Pentaho Report/Dashboard/PDI](https://github.com/NicoDupont/Resources/tree/master/Pentaho) (7.x +)
-- [Apache Airflow](https://github.com/NicoDupont/Resources/tree/master/Apache Airflow) (2.10.2 +)
-- [Apache Hop](https://github.com/NicoDupont/Resources/tree/master/Apache Hop) (2.9.0 +)
+- [Apache Airflow](https://github.com/NicoDupont/Resources/tree/master/Apache%20Airflow) (2.10.2 +)
+- [Apache Hop](https://github.com/NicoDupont/Resources/tree/master/Apache%20Hop) (2.9.0 +)
