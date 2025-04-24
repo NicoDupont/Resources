@@ -1,0 +1,12 @@
+<slave_config>
+  <slaveserver>
+    <name>ServerProd</name>
+    <hostname>HOSTNAME_SERVEUR</hostname>
+    <port>8282</port>
+	<username>user</username>
+    <password>password</password>
+  </slaveserver>
+  <max_log_lines>3000</max_log_lines>
+  <max_log_timeout_minutes>3000</max_log_timeout_minutes>
+  <object_timeout_minutes>3000</object_timeout_minutes>
+</slave_config>
