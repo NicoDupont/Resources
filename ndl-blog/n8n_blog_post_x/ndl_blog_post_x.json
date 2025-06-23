@@ -1,0 +1,525 @@
+{
+  "name": "ndl_blog_post_x",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://www.ndl-blog.net/rss.xml",
+        "options": {}
+      },
+      "id": "161cde07-1077-4d5a-83d5-54df40a81f3c",
+      "name": "Fetch RSS ndl-blog",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        -340
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO ndl_blog_post_x (guid, title, link, pubDate, postDate) VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP);",
+        "options": {
+          "queryBatching": "independently",
+          "queryReplacement": "={{ $('If Article est nouveau').item.json.guid }}, {{ $('If Article est nouveau').item.json.title }}, {{ $('If Article est nouveau').item.json.link }},{{ $('If Article est nouveau').item.json.formattedPubDate }}",
+          "detailedOutput": true
+        }
+      },
+      "id": "31fa8528-4e40-4e23-9d95-ee6ca2549b2d",
+      "name": "Save Article Posté",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2,
+      "position": [
+        1180,
+        -460
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "mySql": {
+          "id": "A8KRfApDHECGmAWa",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT guid FROM ndl_blog_post_x WHERE guid = $1 LIMIT 1;",
+        "options": {
+          "queryBatching": "independently",
+          "queryReplacement": "={{ $json.guid }}"
+        }
+      },
+      "id": "c969ceb6-015d-4479-81d2-85c75dd548f7",
+      "name": "Check si article dans la table (Déja Posté)",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2,
+      "position": [
+        100,
+        -520
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "mySql": {
+          "id": "A8KRfApDHECGmAWa",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        980,
+        -180
+      ],
+      "id": "aee2518a-13b5-4edd-88e7-c2f3f286e643",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        520,
+        -360
+      ],
+      "id": "7a0b1bb2-db58-47fe-bb4c-0a6bd3891457",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "content": "### Test si Article dans la Database = déjà posté",
+        "height": 220,
+        "width": 380
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        40,
+        -560
+      ],
+      "id": "73d6d0a3-6901-443a-9355-efe4c0127c53",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "### Merge pour mapper le boolean nouveau article avec les items en entrées",
+        "height": 280,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        440,
+        -460
+      ],
+      "id": "d463c3aa-445d-4e88-872f-48d7d29857bb",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const moisFRtoEN = {\n  \"janvier\": \"Jan\", \"février\": \"Feb\", \"mars\": \"Mar\",\n  \"avril\": \"Apr\", \"mai\": \"May\", \"juin\": \"Jun\",\n  \"juillet\": \"Jul\", \"août\": \"Aug\", \"septembre\": \"Sep\",\n  \"octobre\": \"Oct\", \"novembre\": \"Nov\", \"décembre\": \"Dec\",\n  \"jan\": \"Jan\", \"fév\": \"Feb\", \"mar\": \"Mar\",\n  \"avr\": \"Apr\", \"mai\": \"May\", \"jun\": \"Jun\",\n  \"jui\": \"Jul\", \"aoû\": \"Aug\", \"sep\": \"Sep\",\n  \"oct\": \"Oct\", \"nov\": \"Nov\", \"déc\": \"Dec\"\n};\n\nreturn items.map(item => {\n  let dateStr = item.json.pubDate;\n\n  // 🔁 Remplace les mois français par anglais\n  Object.entries(moisFRtoEN).forEach(([fr, en]) => {\n    const regex = new RegExp(fr, 'i');\n    dateStr = dateStr.replace(regex, en);\n  });\n\n  const parsedDate = new Date(dateStr);\n  \n  if (isNaN(parsedDate.getTime())) {\n    item.json.formattedPubDate = 'Invalid date';\n  } else {\n    const pad = (n) => n.toString().padStart(2, '0');\n    const formatted = `${parsedDate.getFullYear()}-${pad(parsedDate.getMonth()+1)}-${pad(parsedDate.getDate())} ${pad(parsedDate.getHours())}:${pad(parsedDate.getMinutes())}:${pad(parsedDate.getSeconds())}`;\n    item.json.formattedPubDate = formatted;\n  }\n\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -320,
+        -340
+      ],
+      "id": "af3503b3-5ba5-47fb-be65-ba02acabd786",
+      "name": "Creation Date"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  item.json.nouveau = !item.json.guid;\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        280,
+        -520
+      ],
+      "id": "71dd4a72-f2f0-46ec-9722-2de23bb8f184",
+      "name": "Code Test Nouveau Article"
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.title }}\n{{ $json.link }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 2,
+      "position": [
+        960,
+        -460
+      ],
+      "id": "f63951f7-6240-4a84-a7d5-2f3ca244f60d",
+      "name": "X Post Tweet",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "bR7iUgeDj4l7OWEa",
+          "name": "X account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "### Créer le tweet pour chaque nouveau article et sauvegarder chaque article posté sur X dans la Database",
+        "height": 280,
+        "width": 400,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -540
+      ],
+      "id": "281c8833-63b7-4fff-95b8-23ed7319e3bf",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "fromEmail": "tonemail@domaine.fr",
+        "toEmail": "tonemail@domaine.fr",
+        "subject": "Article posté sur X",
+        "html": "=Posté le : {{ $now }}<br>\n{{ $json.allTitles }}",
+        "options": {
+          "appendAttribution": true
+        }
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1600,
+        -460
+      ],
+      "id": "578c123e-0c5e-403a-973c-e17c6d6d08bf",
+      "name": "Send Email Notification réussite",
+      "webhookId": "a10ba0f9-9461-4933-9d99-82af3db8b1ce",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "smtp": {
+          "id": "sdND1Huma4r7DvvL",
+          "name": "SMTP account contact"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "### Si pas de nouveau Article, on ne fait rien",
+        "height": 240,
+        "width": 280,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -240
+      ],
+      "id": "104c6552-8960-436c-a44e-a9471d4e9e6d",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "### Sélection des articles via la ressource RSS",
+        "height": 260,
+        "width": 560,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        -420
+      ],
+      "id": "30d992f7-594a-4f8c-8ebf-6fffca8526d8",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f95d4e59-787b-49fa-bba7-214dbdac4f0b",
+              "leftValue": "={{ $json.nouveau }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        740,
+        -360
+      ],
+      "id": "5d8b7ee4-6138-4851-a038-52c4da36e49d",
+      "name": "If Article est nouveau"
+    },
+    {
+      "parameters": {
+        "content": "### Création Email de synthese",
+        "height": 280,
+        "width": 420,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        -540
+      ],
+      "id": "08dae7c4-e075-423f-b429-f2b746dca144",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -540,
+        -660
+      ],
+      "id": "64b39b4b-6e5d-473c-aaba-10e9fe3d4f51",
+      "name": "Cron 10H Tous les jours"
+    },
+    {
+      "parameters": {
+        "jsCode": "const titles = $('If Article est nouveau').all().map(item => `- ${item.json.title}`);\nconst joined = titles.join('<br>'); // Ou '\\n' pour une version texte\n\nreturn [{ json: { allTitles: joined } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        -460
+      ],
+      "id": "690e6d72-1689-4779-8732-f6f30f416584",
+      "name": "Fusion Items"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        -340
+      ],
+      "id": "61e7a678-1547-4cb2-b0b6-eb1d283a3ef9",
+      "name": "Limit (3)",
+      "notesInFlow": true,
+      "notes": "On limite au 3 derniers items pour ne pas faire de traitement inutile !"
+    },
+    {
+      "parameters": {
+        "content": "### Décision",
+        "height": 280,
+        "width": 200
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        700,
+        -460
+      ],
+      "id": "66073aba-2ede-44c3-a0e2-5530f81ac6aa",
+      "name": "Sticky Note6"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Fetch RSS ndl-blog": {
+      "main": [
+        [
+          {
+            "node": "Creation Date",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Save Article Posté": {
+      "main": [
+        [
+          {
+            "node": "Fusion Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check si article dans la table (Déja Posté)": {
+      "main": [
+        [
+          {
+            "node": "Code Test Nouveau Article",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "If Article est nouveau",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Creation Date": {
+      "main": [
+        [
+          {
+            "node": "Limit (3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code Test Nouveau Article": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "X Post Tweet": {
+      "main": [
+        [
+          {
+            "node": "Save Article Posté",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Article est nouveau": {
+      "main": [
+        [
+          {
+            "node": "X Post Tweet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron 10H Tous les jours": {
+      "main": [
+        [
+          {
+            "node": "Fetch RSS ndl-blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fusion Items": {
+      "main": [
+        [
+          {
+            "node": "Send Email Notification réussite",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit (3)": {
+      "main": [
+        [
+          {
+            "node": "Check si article dans la table (Déja Posté)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Paris",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 300,
+    "errorWorkflow": "uiRV1xo6q515DenL"
+  },
+  "versionId": "cf0c5559-f515-47e9-965f-465ed4789879",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "96987fe1d62f44d04fe355a1622a22336d2fad3fc4503d35fffab2cfc75ab387"
+  },
+  "id": "vW2Bs4KfdIFtmfrt",
+  "tags": [
+    {
+      "createdAt": "2025-05-27T13:33:11.523Z",
+      "updatedAt": "2025-05-27T13:33:11.523Z",
+      "id": "tfGvhxBdVgfQhYsk",
+      "name": "wordpress"
+    }
+  ]
+}

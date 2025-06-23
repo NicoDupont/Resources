@@ -1,0 +1,137 @@
+{
+  "name": "email_erreur",
+  "nodes": [
+    {
+      "parameters": {
+        "fromEmail": "tonemail@domaine.fr",
+        "toEmail": "tonemail@domaine.fr",
+        "subject": "Erreur Workflow n8n",
+        "html": "=Date : {{ $now.setZone(\"Europe/Paris\").toFormat(\"dd/MM/yyyy HH:mm\") }}<br>\nWorkflow : {{ $json.workflow.name }}<br>\nId execution : {{ $json.execution.id }}<br>\nNoeud : {{ $json.execution.lastNodeExecuted }}<br>\nUrl : {{ $json.execution.url }}<br>\nMessage erreur : {{ $json.execution.error.message }}<br>\nStack erreur : {{ $json.execution.error.stack }}<br>\nLancement : {{ $json.execution.mode }}<br>",
+        "options": {
+          "appendAttribution": true
+        }
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        -180,
+        -220
+      ],
+      "id": "2e48176d-19cc-490c-ab81-9cc60a5f0682",
+      "name": "Send Email",
+      "webhookId": "83326bc0-fab6-47e5-bbda-22b6aa0ce1d9",
+      "notesInFlow": true,
+      "executeOnce": true,
+      "credentials": {
+        "smtp": {
+          "id": "sdND1Huma4r7DvvL",
+          "name": "SMTP account contact"
+        }
+      },
+      "notes": "Envoyer un email avec le workflow en erreur"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        -220
+      ],
+      "id": "210c4507-e062-4431-8be1-1c0e1dc46301",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = items[0];\n\nconst exec = item.json.execution;\nconst wf = item.json.workflow;\n\nreturn [\n  {\n    json: {\n      execution_id: exec.id,\n      url: exec.url  || null,\n      retry_of: exec.retryOf || null,\n      error_message: exec.error?.message || null,\n      error_stack: exec.error?.stack || null,\n      last_node_executed: exec.lastNodeExecuted  || null,\n      mode: exec.mode  || null,\n      workflow_id: wf.id  || null,\n      workflow_name: wf.name || null\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -340,
+        -420
+      ],
+      "id": "fa638f24-df73-4b53-8845-a22492035401",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "execution_error",
+          "mode": "list",
+          "cachedResultName": "execution_error"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -180,
+        -420
+      ],
+      "id": "f4ffa3dc-4555-4ac3-aafc-712acf8199b3",
+      "name": "Insert n8n_execution_error",
+      "credentials": {
+        "mySql": {
+          "id": "A8KRfApDHECGmAWa",
+          "name": "MySQL account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email": {
+      "main": [
+        []
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Insert n8n_execution_error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert n8n_execution_error": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Paris",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 300
+  },
+  "versionId": "008df5d6-407c-4b11-aa61-870583b2aa41",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "96987fe1d62f44d04fe355a1622a22336d2fad3fc4503d35fffab2cfc75ab387"
+  },
+  "id": "uiRV1xo6q515DenL",
+  "tags": []
+}
