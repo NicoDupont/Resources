@@ -17,4 +17,4 @@ But do not hesitate to send me an email if you see a mistake, to add some improv
 - [Apache Hop](https://github.com/NicoDupont/Resources/tree/master/Apache%20Hop) (2.9.0 +)
 - [n8n](https://github.com/NicoDupont/Resources/tree/master/n8n) (1.100 +)
 - [Blog](https://github.com/NicoDupont/Resources/tree/master/ndl-blog)
-- [DAtasets](https://github.com/NicoDupont/Resources/tree/master/Datasets)
+- [Datasets](https://github.com/NicoDupont/Resources/tree/master/Datasets)
