@@ -1,0 +1,1 @@
+sqlite3 -json /.n8n/database.sqlite "SELECT a.* FROM execution_entity as a left join execution_data as b on a.id=b.executionid where a.id='1313';"
