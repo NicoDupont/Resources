@@ -1,4 +1,3 @@
-![](https://img.shields.io/badge/SAS-9.X-B34936.svg) ![](https://img.shields.io/badge/VBA-Excel-945DB7.svg) ![](https://img.shields.io/badge/Python-3.X-3572A5.svg)
 
 # Resources
 
@@ -16,3 +15,6 @@ But do not hesitate to send me an email if you see a mistake, to add some improv
 - [Pentaho Report/Dashboard/PDI](https://github.com/NicoDupont/Resources/tree/master/Pentaho) (7.x +)
 - [Apache Airflow](https://github.com/NicoDupont/Resources/tree/master/Apache%20Airflow) (2.10.2 +)
 - [Apache Hop](https://github.com/NicoDupont/Resources/tree/master/Apache%20Hop) (2.9.0 +)
+- [n8n](https://github.com/NicoDupont/Resources/tree/master/n8n) (1.100 +)
+- [Blog](https://github.com/NicoDupont/Resources/tree/master/ndl-blog)
+- [DAtasets](https://github.com/NicoDupont/Resources/tree/master/Datasets)
