@@ -1,0 +1,222 @@
+{
+  "name": "subworkflow_webhook",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "",
+        "height": 189,
+        "width": 1197
+      },
+      "id": "69b99913-f511-41d6-9666-f0684aa488b2",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -360,
+        -140
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.body.wait_time }}"
+      },
+      "id": "86157d73-34b7-4ca4-85bb-f38d85c2dd62",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        160,
+        -100
+      ],
+      "webhookId": "2d62e5c2-ad4a-4e90-a075-7ca5212e015a",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Webhook').item.json.headers.callbackurl }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "finishedItemId",
+              "value": "={{ $('Webhook').item.json.body.requestItemId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "806423b6-a580-469e-93d1-f8916bac95e5",
+      "name": "Call Resume on Parent Workflow",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        600,
+        -100
+      ],
+      "retryOnFail": true,
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "UrTuuJ4GmiwTkjn6",
+          "name": "webhook poc dispam"
+        }
+      },
+      "notes": "The callback resumes the parent workflow and reports which item finished.  There could be a race condition if the parent workflow was just resumed by a different sub-workflow but hasn't entered a webhook-wait again yet.  The delay and retry mitigates for the possibility that multiple subtasks complete and call back at once."
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ \n{\n  \"finishedItemId\": $json.body.requestItemId\n}\n}}",
+        "options": {}
+      },
+      "id": "2d772039-0de3-4f72-960f-ed43b34c9150",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        -60,
+        -100
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "parallel-subworkflow-target",
+        "authentication": "basicAuth",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "782b98e0-bce4-4f64-9122-731655b09957",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -280,
+        -100
+      ],
+      "webhookId": "14776b45-77d7-4220-808f-2d0a38bec4de",
+      "typeVersion": 2,
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "UrTuuJ4GmiwTkjn6",
+          "name": "webhook poc dispam"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO test_subworkflow (requete, subworkflow, workflow_parent) VALUES ($1, $2, $3);",
+        "options": {
+          "queryBatching": "independently",
+          "queryReplacement": "={{ $json.body.requete }},{{ $json.body.requestItemId }},{{ $json.body.workflow_parent }}"
+        }
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        380,
+        -100
+      ],
+      "id": "280af4bf-d499-4ffd-aca2-a781a355e597",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "mySql": {
+          "id": "A8KRfApDHECGmAWa",
+          "name": "MySQL account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "connection": "close",
+            "host": "your_url",
+            "x-forwarded-scheme": "https",
+            "x-forwarded-proto": "https",
+            "x-forwarded-for": "86.221.106.91",
+            "x-real-ip": "86.221.106.91",
+            "content-length": "115",
+            "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7",
+            "content-type": "application/json",
+            "callbackurl": "https://your_url/webhook-waiting/1487",
+            "user-agent": "axios/1.8.3",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "authorization": "Basic password"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "requestItemId": "9a1c2ea0-40f3-4d01-8ac2-7f2fb8ebb6f6",
+            "wait_time": 8,
+            "requete": "Requete 1",
+            "workflow_parent": 1487
+          },
+          "webhookUrl": "https://your_url/webhook/parallel-subworkflow-target",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Call Resume on Parent Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6858dcd5-434a-4c47-b70c-594d29632826",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "96987fe1d62f44d04fe355a1622a22336d2fad3fc4503d35fffab2cfc75ab387"
+  },
+  "id": "321HJdwXCfBsPpir",
+  "tags": []
+}

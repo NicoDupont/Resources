@@ -1,0 +1,131 @@
+{
+  "name": "subworkflow_async",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "requete"
+            },
+            {
+              "name": "wait_time",
+              "type": "number"
+            },
+            {
+              "name": "subworkflow"
+            },
+            {
+              "name": "workflow_parent",
+              "type": "number"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -200,
+        0
+      ],
+      "id": "2e700567-cd1b-4740-86bc-18f63db5c966",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.wait_time }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        20,
+        0
+      ],
+      "id": "c0a3fcaf-0164-4f32-8b13-d485a6d031c1",
+      "name": "Wait {{ $json.wait_time }}",
+      "webhookId": "6d8ce436-a808-489c-813f-747ff0453638"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        460,
+        0
+      ],
+      "id": "9a9e267a-0244-4ed3-855f-31d1e7233e59",
+      "name": "Autres Actions"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO test_subworkflow (requete, subworkflow, workflow_parent) VALUES ($1, $2, $3);",
+        "options": {
+          "queryBatching": "independently",
+          "queryReplacement": "={{ $json.requete }},{{ $json.subworkflow }},{{ $json.workflow_parent }}"
+        }
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        240,
+        0
+      ],
+      "id": "dfb1021f-af22-44f0-8143-df7d44b51f9e",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "mySql": {
+          "id": "A8KRfApDHECGmAWa",
+          "name": "MySQL account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Wait {{ $json.wait_time }}",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait {{ $json.wait_time }}": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Autres Actions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "36312ee7-a644-49ae-a4f4-1f8d6f3f3eae",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "96987fe1d62f44d04fe355a1622a22336d2fad3fc4503d35fffab2cfc75ab387"
+  },
+  "id": "E7G0S6BlfXIaeNGa",
+  "tags": []
+}

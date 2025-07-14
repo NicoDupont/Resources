@@ -1,0 +1,582 @@
+{
+  "name": "async",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        460
+      ],
+      "id": "2aed33cf-c6ea-4975-a7fe-fd8e47111cfb",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        340,
+        -400
+      ],
+      "id": "2ef212ef-e244-4ec5-8c73-d70488afda72",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "E7G0S6BlfXIaeNGa",
+          "mode": "list",
+          "cachedResultName": "subworkflow_async"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "requete": "={{ $json.requete }}",
+            "workflow_parent": "={{ $json.workflowid }}",
+            "wait_time": "={{ $json.wait_time }}",
+            "subworkflow": "={{ $json.requestId }}"
+          },
+          "matchingColumns": [
+            "requete"
+          ],
+          "schema": [
+            {
+              "id": "requete",
+              "displayName": "requete",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "wait_time",
+              "displayName": "wait_time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "number",
+              "removed": false
+            },
+            {
+              "id": "subworkflow",
+              "displayName": "subworkflow",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "workflow_parent",
+              "displayName": "workflow_parent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "number",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        500,
+        80
+      ],
+      "id": "c989bfa8-62d2-4c59-ad77-4cca6f9c95e1",
+      "name": "Execute Workflow",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        780,
+        -480
+      ],
+      "id": "92f37529-5810-41fb-9fe3-ae54dab3d27a",
+      "name": "Autres Actions1"
+    },
+    {
+      "parameters": {
+        "resume": "webhook",
+        "httpMethod": "POST",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "ba21eed2-6b6c-41f6-a215-4877c5fdd1eb",
+      "name": "Webhook Callback Wait",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        1020,
+        580
+      ],
+      "webhookId": "5cd058b4-48c8-449a-9c09-959a5b8a2b48",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "jsCode": "let json = $('If All Finished').first().json;\nif (!json.finishedSet) json.finishedSet = [];\nlet finishedItemId = $('Webhook Callback Wait').item.json.body.finishedItemId;\nif (!json.finishedSet[finishedItemId]) json.finishedSet.push(finishedItemId);\nreturn [json];"
+      },
+      "id": "5da54750-5794-4229-adad-366489aac022",
+      "name": "Update finishedSet",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1240,
+        580
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "193ab8f1-0e23-491c-914e-b8b26b0160f7",
+              "name": "finishedSet",
+              "type": "array",
+              "value": "[]"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9fa5eebf-e210-410a-955c-57a549417d86",
+      "name": "Initialize finishedSet",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        560,
+        380
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 1,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "385c3149-3623-4dd2-9022-770c32f82421",
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              },
+              "leftValue": "={{ $json.finishedSet.length }}",
+              "rightValue": "={{ $('Générations données').all().length }}"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c51a8b39-46fb-458a-b7e7-59b7d8569e3b",
+      "name": "If All Finished",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        860,
+        380
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://your_url/webhook/parallel-subworkflow-target",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "callbackurl",
+              "value": "={{ $execution.resumeUrl }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "requestItemId",
+              "value": "={{ $json.requestId }}"
+            },
+            {
+              "name": "wait_time",
+              "value": "={{ $json.wait_time }}"
+            },
+            {
+              "name": "requete",
+              "value": "={{ $json.requete }}"
+            },
+            {
+              "name": "workflow_parent",
+              "value": "={{ $json.workflowid }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "43713eef-87c1-4b88-87ff-9d44bde0a4f6",
+      "name": "Start Sub-Workflow via Webhook",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        560,
+        580
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "UrTuuJ4GmiwTkjn6",
+          "name": "webhook poc dispam"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "484bc99c-1322-4246-ab05-87bb503dcb18",
+      "name": "Acknowledge Finished",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        1440,
+        580
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "content": "### Pseudo-Synchronously Wait for All Sub-Workflows to finish",
+        "height": 80,
+        "width": 283,
+        "color": 3
+      },
+      "id": "855bc82f-28f4-48af-9e7f-45e4c0c8f906",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1080,
+        480
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "f032e730-398d-4179-b8f1-2879eb3c1276",
+      "name": "Loop Over Items1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        360,
+        460
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "content": "### Mode Séquentiel (de base)\n\n-> les actions sont effectuées item après item, l'un après l'autre. \n-> Certains noeuds spécifiques permettent de réaliser des actions en batch.\n\n-> On simule une action longue avec le noeud wait et on fait ca pour chaque item dans la loop.\n-> Sans loop, le wait ne se fait qu'une seule fois meme si il y a plusieurs items dans le flux de données.\n-> On stocke dans une table sql, l'heure de fin d'exécution de chaque item.",
+        "height": 520,
+        "width": 780
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        260,
+        -640
+      ],
+      "typeVersion": 1,
+      "id": "3750381a-0a72-44d8-b92a-b48aef737b92",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "### Mode parallèle / asynchrone.\n\n-> En décochant l'option \"Wait For Sub-Workflow Completion\" des sous workflows (1 par item) sont lancés de manière quasiment simultanées mais on ne sait pas quand ils sont tous terminés.\n\n-> Selon ce qu'on veut faire, ca peut être limitant.",
+        "height": 360,
+        "width": 780,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        260,
+        -100
+      ],
+      "typeVersion": 1,
+      "id": "9f92a631-bb23-4d78-b0f5-aff61b9d4e04",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "### Mode parallèle / asynchrone avec contrôle de la fin des executions (polling) \n\n-> Des sous workflow sont lancés depuis l'api de n8n. \n-> On attend le callback de tous les sous workflows pour ensuite continuer d'autres actions.",
+        "height": 560,
+        "width": 1420,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        260,
+        280
+      ],
+      "typeVersion": 1,
+      "id": "4e901c95-2c42-4d45-a8ad-aa2ba11072b7",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.wait_time }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        560,
+        -320
+      ],
+      "id": "c9570398-f96d-4640-9f2b-b422c9bba141",
+      "name": "Wait {{ $json.wait_time }}",
+      "webhookId": "0c698f6d-86e1-47c1-80ac-6eed50291f48"
+    },
+    {
+      "parameters": {
+        "jsCode": "function generateUUIDv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    const r = Math.random() * 16 | 0;\n    const v = c === 'x' ? r : (r & 0x3 | 0x8); // version + variant bits\n    return v.toString(16);\n  });\n}\n\nconst min = 5; \nconst max = 5;\nconst count = 5;\nconst execId = parseInt($execution.id); // on récupère l'executionId une seule fois\n/**\nconst execId = $execution.id;\n */\n\nconst items = Array.from({ length: count }, (_, i) => {\n  const randomInt = Math.floor(Math.random() * (max - min + 1)) + min;\n  return {\n    json: {\n      requete: `Requete ${i + 1}`,\n      requestId: generateUUIDv4(),\n      wait_time: randomInt,\n      workflowid: execId\n    }\n  };\n});\n\nreturn items;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        100,
+        460
+      ],
+      "id": "a7535a67-842c-417b-85c4-f81540053608",
+      "name": "Générations données"
+    },
+    {
+      "parameters": {},
+      "id": "c3cd1195-b7cb-4d56-9e50-7f18f8986cfe",
+      "name": "Autres actions",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        1460,
+        360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO test_subworkflow (requete, subworkflow, workflow_parent) VALUES ($1, $2, $3);",
+        "options": {
+          "queryBatching": "independently",
+          "queryReplacement": "={{ $json.requete }},{{ $json.requestId }},{{ $json.workflowid }}"
+        }
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        780,
+        -320
+      ],
+      "id": "7fbed794-cc76-4d31-92d4-e25addbab74d",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "mySql": {
+          "id": "A8KRfApDHECGmAWa",
+          "name": "MySQL account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Générations données",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Autres Actions1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait {{ $json.wait_time }}",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        []
+      ]
+    },
+    "If All Finished": {
+      "main": [
+        [
+          {
+            "node": "Autres actions",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Webhook Callback Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update finishedSet": {
+      "main": [
+        [
+          {
+            "node": "Acknowledge Finished",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Acknowledge Finished": {
+      "main": [
+        [
+          {
+            "node": "If All Finished",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Callback Wait": {
+      "main": [
+        [
+          {
+            "node": "Update finishedSet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Initialize finishedSet": {
+      "main": [
+        [
+          {
+            "node": "If All Finished",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start Sub-Workflow via Webhook": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [
+          {
+            "node": "Initialize finishedSet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Start Sub-Workflow via Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait {{ $json.wait_time }}": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Générations données": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b15fc246-d14a-4e4e-8d4e-22edf11db3c6",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "96987fe1d62f44d04fe355a1622a22336d2fad3fc4503d35fffab2cfc75ab387"
+  },
+  "id": "57hI23xBcBU0PzMn",
+  "tags": []
+}
